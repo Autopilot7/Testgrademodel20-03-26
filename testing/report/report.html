@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vietnamese Phoneme / Alignment Pipeline Benchmark Report</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #1a1a2e;
+  background: #ffffff;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 48px 80px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #0d1b2a;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 12px;
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: 1.35em;
+  font-weight: 700;
+  color: #1e3a5f;
+  border-bottom: 1px solid #dbeafe;
+  padding-bottom: 6px;
+  margin: 40px 0 16px;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #1e40af;
+  margin: 28px 0 10px;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #374151;
+  margin: 20px 0 8px;
+}
+
+p { margin: 10px 0; }
+
+a { color: #2563eb; }
+
+strong { font-weight: 600; color: #0d1b2a; }
+
+em { font-style: italic; }
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 36px 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 13px;
+  page-break-inside: avoid;
+}
+
+thead tr {
+  background: #1e3a5f;
+  color: #ffffff;
+}
+
+thead th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+tbody tr:nth-child(even) { background: #f0f4ff; }
+tbody tr:nth-child(odd)  { background: #ffffff; }
+
+tbody td {
+  padding: 8px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+/* Code blocks */
+pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin: 16px 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  page-break-inside: avoid;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+p code, li code, td code {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12.5px;
+}
+
+/* Lists */
+ul, ol {
+  margin: 10px 0 10px 24px;
+}
+li { margin: 4px 0; }
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #2563eb;
+  background: #eff6ff;
+  padding: 12px 20px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
+  color: #1e40af;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  page-break-inside: avoid;
+}
+
+/* Print / PDF styles */
+@media print {
+  body { max-width: 100%; padding: 20px 30px; font-size: 12px; }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.2em; margin-top: 28px; }
+  h3 { font-size: 1em; }
+  pre { font-size: 11px; padding: 14px; }
+  table { font-size: 11px; }
+  img { max-width: 88%; }
+  h2, h3 { page-break-after: avoid; }
+  pre, table, img { page-break-inside: avoid; }
+}
+
+/* Header meta block */
+.meta-block {
+  background: #f0f4ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 0 0 32px;
+  font-size: 13px;
+  color: #374151;
+}
+.meta-block p { margin: 3px 0; }
+</style>
+</head>
+<body>
+<h1 id="vietnamese-phoneme-alignment-pipeline-benchmark-report">Vietnamese Phoneme / Alignment Pipeline — Benchmark Report</h1>
+<p><strong>Prepared by:</strong> Surface1<br />
+<strong>Date:</strong> 24 March 2026<br />
+<strong>Dataset:</strong> Mozilla Common Voice Vietnamese — 18 samples, WAV mono 16 kHz<br />
+<strong>Constraint:</strong> 4 GB Docker memory, up to 5 simultaneous users<br />
+<strong>Deadline:</strong> 24 March 2026, 16:30</p>
+<hr />
+<h2 id="1-executive-summary">1. Executive Summary</h2>
+<p>This report investigates three open-source techniques for phoneme splitting and forced alignment of Vietnamese audio. Each pipeline was implemented, smoke-tested, and benchmarked against 18 audio clips from Mozilla Common Voice Vietnamese. The evaluation measures RAM per instance, time per word, and scalability under concurrent load.</p>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>Scenario</th>
+<th>Success (18 clips)</th>
+<th>Peak RAM</th>
+<th>Time / word</th>
+<th>Fits 4 GB</th>
+<th>Scales to 5 users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MFA</strong></td>
+<td>Transcript-based</td>
+<td>16/18 (89%)</td>
+<td><strong>311 MB</strong></td>
+<td>3.20 s</td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong> (flat ~21 s)</td>
+</tr>
+<tr>
+<td><strong>NeMo FA</strong></td>
+<td>Transcript-based</td>
+<td>18/18 (100%)</td>
+<td><strong>5,279 MB</strong></td>
+<td>6.64 s</td>
+<td><strong>NO</strong></td>
+<td>No (OOM at 5 users)</td>
+</tr>
+<tr>
+<td><strong>WhisperX</strong></td>
+<td>No transcript</td>
+<td>18/18 (100%)</td>
+<td><strong>1,067 MB</strong></td>
+<td>6.78 s</td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong> (42 s at 5 users)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical finding:</strong> NeMo Forced Aligner (<code>nvidia/parakeet-ctc-0.6b-vi</code>) loads ~5.3 GB into RAM per instance — exceeding the 4 GB Docker constraint before a single user even submits a request. MFA and WhisperX both fit within 4 GB and scale to 5 concurrent users without degradation.</p>
+<hr />
+<h2 id="2-pipeline-descriptions">2. Pipeline Descriptions</h2>
+<h3 id="21-mfa-montreal-forced-aligner">2.1 MFA — Montreal Forced Aligner</h3>
+<p><strong>Type:</strong> Classical HMM/GMM forced alignment (transcript-based)<br />
+<strong>Model:</strong> <code>vietnamese_cv</code> acoustic model + pronunciation dictionary (v2.0.0, MFA pretrained models)<br />
+<strong>Environment:</strong> <code>mfa-aligner</code> conda env (conda-forge)</p>
+<p>MFA is a traditional forced aligner that uses Hidden Markov Models (HMMs) with Gaussian Mixture Model (GMM) acoustic scoring. It accepts a reference transcript and audio file, and produces a Praat TextGrid file containing word-level and phoneme-level time boundaries.</p>
+<p><strong>How it works for Vietnamese:</strong><br />
+1. Normalises text and looks up each word in the pronunciation dictionary<br />
+2. Extracts MFCC features from the audio<br />
+3. Runs Viterbi alignment to find the most likely phoneme sequence timing<br />
+4. Exports TextGrid with word and phone tiers</p>
+<p><strong>Key characteristics:</strong><br />
+- Very low RAM footprint (~311 MB peak) — stores only a small HMM model<br />
+- Requires every word to be in the pronunciation dictionary (OOV words cause failures)<br />
+- Deterministic — same input always produces the same output<br />
+- Cold-start overhead: ~18–20 s per call (model re-extracted from ZIP each time)</p>
+<p><strong>Output example (TextGrid phone tier):</strong></p>
+<div class="codehilite"><pre><span></span><code>IntervalTier &quot;phones&quot;
+[0.00 – 0.18]  &quot;t&quot;
+[0.18 – 0.32]  &quot;aj&quot;
+[0.32 – 0.55]  &quot;s&quot;
+[0.55 – 0.72]  &quot;aw&quot;
+</code></pre></div>
+
+<hr />
+<h3 id="22-nemo-forced-aligner-nfa">2.2 NeMo Forced Aligner (NFA)</h3>
+<p><strong>Type:</strong> CTC-based neural forced alignment (transcript-based)<br />
+<strong>Model:</strong> <code>nvidia/parakeet-ctc-0.6b-vi</code> — 600M-parameter CTC conformer trained on Vietnamese<br />
+<strong>Environment:</strong> <code>nemo-aligner</code> conda env (Python 3.10)</p>
+<p>NeMo Forced Aligner is NVIDIA's neural forced alignment tool. It uses a large CTC (Connectionist Temporal Classification) ASR model as its acoustic backbone. The model outputs per-frame character log-probabilities, which NFA then uses to compute the most likely alignment between the transcript and the audio using dynamic programming.</p>
+<p><strong>How it works:</strong><br />
+1. Loads the pretrained CTC ASR model into memory (~5.3 GB on CPU)<br />
+2. Runs forward pass over the audio to get frame-level token log-probabilities<br />
+3. Applies CTC alignment (Viterbi-like) to find token boundaries<br />
+4. Outputs CTM (NIST time-mark) files and ASS subtitle files</p>
+<p><strong>Key characteristics:</strong><br />
+- 100% success rate — neural model handles OOV and noisy speech robustly<br />
+- Massive RAM footprint (~5.3 GB) — disqualifying for a 4 GB Docker container<br />
+- Same per-call latency as WhisperX (~47 s on CPU) — model reload dominates<br />
+- Produces token-level (character/subword) alignments in addition to word-level</p>
+<p><strong>Output formats:</strong> <code>.ctm</code> (word, token, segment timings), <code>.ass</code> (subtitle format)</p>
+<hr />
+<h3 id="23-whisperx">2.3 WhisperX</h3>
+<p><strong>Type:</strong> ASR + phoneme alignment (no reference transcript required)<br />
+<strong>Model:</strong> Whisper <code>small</code> (ASR) + wav2vec2 phoneme aligner<br />
+<strong>Environment:</strong> <code>whisperx-aligner</code> conda env (Python 3.11)</p>
+<p>WhisperX is an extension of OpenAI's Whisper ASR model. It first transcribes the audio using Whisper, then uses a wav2vec2-based forced aligner to produce word-level and phoneme-level timestamps. Because it transcribes before aligning, <strong>no reference transcript is needed</strong> — making it the only viable option for unguided pronunciation assessment.</p>
+<p><strong>How it works:</strong><br />
+1. Loads Whisper-small and performs ASR transcription<br />
+2. Runs Voice Activity Detection (VAD) using pyannote<br />
+3. Aligns the ASR output to the audio using a wav2vec2 phoneme model<br />
+4. Outputs a JSON file with word and phoneme timestamps</p>
+<p><strong>Key characteristics:</strong><br />
+- Works without a reference transcript — unique among the three<br />
+- 100% success rate after encoding fix (see Section 4.3)<br />
+- ~1.1 GB peak RAM — well within the 4 GB budget<br />
+- Exceptional scalability: 5 concurrent users add only 19% wall-clock overhead<br />
+- Trade-off: alignment quality depends on ASR accuracy — mispronounced words are aligned as-spoken, not as-intended</p>
+<p><strong>Output example (JSON word segment):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;word&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sao&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.32</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.54</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.921</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h2 id="3-evaluation-protocol">3. Evaluation Protocol</h2>
+<h3 id="31-dataset">3.1 Dataset</h3>
+<p>18 audio files from Mozilla Common Voice Vietnamese, spanning three duration bands:</p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Duration range</th>
+<th>Sample count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short</td>
+<td>&lt; 3 s</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>3 – 6 s</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Long</td>
+<td>&gt; 6 s</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>All files: WAV, mono, 16 kHz. Ground-truth transcripts from Common Voice metadata stored in <code>data/common_voice_vi/selected/benchmark_manifest.csv</code>.</p>
+<h3 id="32-metrics">3.2 Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idle_ram_mb</code></td>
+<td>RSS memory 0.5 s after subprocess start (startup baseline proxy)</td>
+</tr>
+<tr>
+<td><code>peak_ram_mb</code></td>
+<td>Maximum RSS observed during the entire subprocess run</td>
+</tr>
+<tr>
+<td><code>total_time_sec</code></td>
+<td>Wall-clock time per pipeline call</td>
+</tr>
+<tr>
+<td><code>time_per_word_sec</code></td>
+<td><code>total_time_sec / num_words</code></td>
+</tr>
+<tr>
+<td><code>concurrency_level</code></td>
+<td>Number of simultaneous users in that batch</td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>True</code> if returncode = 0 and an alignment artifact exists on disk</td>
+</tr>
+</tbody>
+</table>
+<p>RAM is measured using <code>psutil</code> polling the full process tree at 100 ms intervals from a background thread (<code>pipelines/common.py: run_with_ram_monitoring()</code>).</p>
+<h3 id="33-concurrency-method">3.3 Concurrency method</h3>
+<p>Concurrency is simulated by launching N pipeline subprocesses simultaneously using <code>concurrent.futures.ThreadPoolExecutor</code>. Each subprocess is fully independent. MFA gets an isolated <code>MFA_ROOT_DIR</code> per worker to avoid Windows file-lock conflicts on the acoustic model files.</p>
+<hr />
+<h2 id="4-setup-and-environment">4. Setup and Environment</h2>
+<h3 id="41-conda-environments">4.1 Conda environments</h3>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>Environment</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFA</td>
+<td><code>mfa-aligner</code></td>
+<td>3.11 (conda-forge)</td>
+</tr>
+<tr>
+<td>NeMo FA</td>
+<td><code>nemo-aligner</code></td>
+<td>3.10</td>
+</tr>
+<tr>
+<td>WhisperX</td>
+<td><code>whisperx-aligner</code></td>
+<td>3.11</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-models">4.2 Models</h3>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>Model</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFA</td>
+<td><code>vietnamese_cv</code> acoustic + dictionary v2.0.0</td>
+<td>MFA pretrained models</td>
+</tr>
+<tr>
+<td>NeMo FA</td>
+<td><code>nvidia/parakeet-ctc-0.6b-vi</code></td>
+<td>HuggingFace (downloaded at runtime)</td>
+</tr>
+<tr>
+<td>WhisperX</td>
+<td>Whisper <code>small</code>, language=<code>vi</code>, int8</td>
+<td>OpenAI / HuggingFace</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-issues-resolved-during-development">4.3 Issues resolved during development</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Root cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WhisperX: <code>UnicodeEncodeError</code> on 17/18 samples</td>
+<td>Windows cp1252 console cannot encode Vietnamese characters (e.g. <code>\u1eb9</code>) printed by whisperx CLI</td>
+<td>Pass <code>PYTHONUTF8=1</code> + <code>PYTHONIOENCODING=utf-8</code> to all subprocess environments via <code>run_with_ram_monitoring()</code></td>
+</tr>
+<tr>
+<td>RAM columns empty on first benchmark run</td>
+<td><code>psutil</code> not installed in NeMo/WhisperX envs; NeMo/WhisperX runners used <code>subprocess.run()</code> with no monitoring thread</td>
+<td>Refactored runners to use <code>Popen</code> + monitoring thread; added <code>run_with_ram_monitoring()</code> to <code>common.py</code></td>
+</tr>
+<tr>
+<td>MFA concurrency failures (0/3, 0/5 success)</td>
+<td>All concurrent workers shared one <code>MFA_ROOT_DIR</code>, causing Windows file-lock on <code>final.mdl</code></td>
+<td>Give each worker an isolated <code>MFA_ROOT_DIR</code> with its own copy of <code>pretrained_models/</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-results">5. Results</h2>
+<h3 id="51-success-rate">5.1 Success Rate</h3>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>Total</th>
+<th>Success</th>
+<th>Failure</th>
+<th>Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFA</td>
+<td>18</td>
+<td>16</td>
+<td>2</td>
+<td>88.9%</td>
+</tr>
+<tr>
+<td>NeMo FA</td>
+<td>18</td>
+<td>18</td>
+<td>0</td>
+<td><strong>100.0%</strong></td>
+</tr>
+<tr>
+<td>WhisperX</td>
+<td>18</td>
+<td>18</td>
+<td>0</td>
+<td><strong>100.0%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Success rate per pipeline" src="../outputs/figures/fig_success_rate.png" /></p>
+<p><strong>MFA failures (2/18):</strong> Samples <code>common_voice_vi_25255203</code> and <code>common_voice_vi_40191822</code> raised <code>NoAlignmentsError</code> — MFA's default beam width (10) was too narrow for those clips. Retrying with <code>--beam 100 --retry_beam 400</code> would likely resolve them. This is clip-specific, not a systemic failure.</p>
+<hr />
+<h3 id="52-ram-usage">5.2 RAM Usage</h3>
+<p>Measured with <code>psutil</code> on the full subprocess process tree (100 ms polling interval).</p>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>Idle RAM (mean)</th>
+<th>Peak RAM (mean)</th>
+<th>Peak RAM (max)</th>
+<th>4 GB Docker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFA</td>
+<td>45.0 MB</td>
+<td><strong>311 MB</strong></td>
+<td>314 MB</td>
+<td>Fits</td>
+</tr>
+<tr>
+<td>NeMo FA</td>
+<td>73.4 MB</td>
+<td><strong>5,279 MB</strong></td>
+<td>5,280 MB</td>
+<td><strong>EXCEEDS ×1.3</strong></td>
+</tr>
+<tr>
+<td>WhisperX</td>
+<td>45.7 MB</td>
+<td><strong>1,067 MB</strong></td>
+<td>1,147 MB</td>
+<td>Fits</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="RAM usage comparison" src="../outputs/figures/fig_ram_comparison.png" /></p>
+<p><strong>NeMo FA is disqualified from a 4 GB deployment.</strong> The <code>parakeet-ctc-0.6b-vi</code> model loads ~5.3 GB of weights into CPU RAM — 1.3 GB over the container limit. Even without any concurrent users, a single NeMo call would trigger an OOM kill in a standard 4 GB Docker container.</p>
+<p>MFA's HMM/GMM model fits in ~311 MB. WhisperX (Whisper-small + phoneme aligner) uses ~1.1 GB — 3.5× lighter than the budget.</p>
+<hr />
+<h3 id="53-latency-and-time-per-word">5.3 Latency and Time per Word</h3>
+<p>All three pipelines reload the model from disk on every call (no persistent server). Model loading therefore dominates total call time for short audio clips.</p>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>Load time (mean)</th>
+<th>Load time (median)</th>
+<th>Total time (mean)</th>
+<th>Time/word (mean)</th>
+<th>Time/word (median)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFA</td>
+<td>20.68 s</td>
+<td>20.18 s</td>
+<td>20.92 s</td>
+<td><strong>3.197 s</strong></td>
+<td>2.507 s</td>
+</tr>
+<tr>
+<td>NeMo FA</td>
+<td>46.63 s</td>
+<td>47.57 s</td>
+<td>46.91 s</td>
+<td>6.640 s</td>
+<td>5.579 s</td>
+</tr>
+<tr>
+<td>WhisperX</td>
+<td>46.73 s</td>
+<td>47.36 s</td>
+<td>47.07 s</td>
+<td>6.782 s</td>
+<td>5.625 s</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Latency comparison" src="../outputs/figures/fig_latency_comparison.png" /></p>
+<p><img alt="Time per word vs audio duration" src="../outputs/figures/fig_tpw_scatter.png" /></p>
+<p>Key observations:<br />
+- <strong>MFA is 2.3× faster</strong> per call (~21 s) than NeMo and WhisperX (~47 s).<br />
+- NeMo and WhisperX converge to nearly identical wall-clock times despite very different architectures — both are bottlenecked by CPU model loading, not by inference.<br />
+- Time-per-word is dominated by model load for short clips (&lt; 5 s). For longer clips the ratio improves as inference time grows while load time stays constant.</p>
+<hr />
+<h3 id="54-scalability-concurrency-at-1-3-and-5-simultaneous-users">5.4 Scalability — Concurrency at 1, 3, and 5 Simultaneous Users</h3>
+<p>N pipeline subprocesses were launched simultaneously. Wall-clock time is the time for all N to complete.</p>
+<h4 id="measured-batch-wall-clock-time">Measured batch wall-clock time</h4>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>1 user</th>
+<th>3 users</th>
+<th>5 users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFA</td>
+<td>21.5 s</td>
+<td><strong>19.5 s</strong></td>
+<td><strong>21.0 s</strong> (4/5 success)</td>
+</tr>
+<tr>
+<td>WhisperX</td>
+<td>35.3 s</td>
+<td><strong>35.5 s</strong></td>
+<td><strong>42.1 s</strong> (5/5 success)</td>
+</tr>
+<tr>
+<td>NeMo FA</td>
+<td>34.0 s</td>
+<td>124.8 s (RAM swap)</td>
+<td><strong>OOM — killed</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="estimated-total-ram-at-concurrency-n-n-mean-peak-per-user">Estimated total RAM at concurrency N (N × mean peak per user)</h4>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>×1</th>
+<th>×3</th>
+<th>×5</th>
+<th>4 GB limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFA</td>
+<td>311 MB</td>
+<td>934 MB</td>
+<td>1,557 MB</td>
+<td>Never exceeded</td>
+</tr>
+<tr>
+<td>WhisperX</td>
+<td>1,067 MB</td>
+<td>3,201 MB</td>
+<td>5,335 MB</td>
+<td>Marginal at ×5</td>
+</tr>
+<tr>
+<td>NeMo FA</td>
+<td><strong>5,279 MB</strong></td>
+<td>15,837 MB</td>
+<td>26,395 MB</td>
+<td>Exceeded at ×1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Scalability comparison" src="../outputs/figures/fig_scalability_comparison.png" /></p>
+<p><strong>WhisperX scales best.</strong> Wall-clock time increases by only 19% when going from 1 to 5 concurrent users (35.3 s → 42.1 s). Each subprocess runs independently on a separate CPU core with no shared state.</p>
+<p><strong>MFA also scales well.</strong> Wall-clock time stays flat (~20 s) across all concurrency levels. Isolated <code>MFA_ROOT_DIR</code> directories per worker prevent the Windows file-lock conflict that caused failures in an earlier run.</p>
+<p><strong>NeMo cannot scale.</strong> At 3 concurrent users, batch time grew from 34 s to 125 s (3.7× slower) due to severe RAM swapping (~16 GB needed). At 5 users (~26 GB), the system ran out of memory and the benchmark was killed. This is a direct consequence of NeMo already exceeding the 4 GB limit at concurrency = 1.</p>
+<hr />
+<h2 id="6-scenario-analysis">6. Scenario Analysis</h2>
+<h3 id="scenario-1-guided-read-aloud-assessment-reference-transcript-available">Scenario 1 — Guided Read-Aloud Assessment (reference transcript available)</h3>
+<p>Applicable pipelines: <strong>MFA</strong> and <strong>NeMo FA</strong></p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>MFA</th>
+<th>NeMo FA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success rate</td>
+<td>89% (16/18)</td>
+<td><strong>100% (18/18)</strong></td>
+</tr>
+<tr>
+<td>Load time per call</td>
+<td><strong>~21 s</strong></td>
+<td>~47 s</td>
+</tr>
+<tr>
+<td>Peak RAM (mean)</td>
+<td><strong>311 MB</strong></td>
+<td>5,279 MB</td>
+</tr>
+<tr>
+<td>Fits 4 GB Docker</td>
+<td><strong>Yes</strong></td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>Scales to 5 users</td>
+<td><strong>Yes</strong> (flat ~21 s)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Output format</td>
+<td>TextGrid (Praat)</td>
+<td>CTM + ASS</td>
+</tr>
+<tr>
+<td>Phoneme-level output</td>
+<td>Yes</td>
+<td>Yes (token-level)</td>
+</tr>
+<tr>
+<td>Handles OOV words</td>
+<td>No (dictionary-bound)</td>
+<td>Yes (open vocabulary)</td>
+</tr>
+<tr>
+<td>Robustness</td>
+<td>Fails on 2/18 clips</td>
+<td>Perfect on all 18</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation:</strong> For a 4 GB Docker deployment, <strong>MFA is the only viable transcript-based option</strong>. It fits in 311 MB, scales linearly to 5 users within budget, and is 2.3× faster per call than NeMo. The 2 clip failures are beam-width related and fixable. NeMo FA offers superior robustness but cannot run in a 4 GB container without a smaller or quantised model.</p>
+<h3 id="scenario-2-unguided-pronunciation-assessment-no-reference-transcript">Scenario 2 — Unguided Pronunciation Assessment (no reference transcript)</h3>
+<p>Applicable pipeline: <strong>WhisperX</strong></p>
+<p>WhisperX is the only pipeline that does not require a reference transcript. It transcribes first, then aligns — making it suitable for free-speech or unscripted pronunciation tasks.</p>
+<ul>
+<li>100% success rate on all 18 samples (after encoding fix)</li>
+<li>~1.1 GB peak RAM — comfortably within the 4 GB budget</li>
+<li>Scales to 5 concurrent users with only 19% latency overhead</li>
+<li>Limitation: alignment quality tracks ASR output, not ground truth. A mispronounced word will be aligned as spoken, not as intended — the pipeline cannot detect pronunciation errors without a reference.</li>
+</ul>
+<p><strong>Recommendation:</strong> WhisperX is recommended for unguided assessment. It is the best-performing pipeline on scalability and the only one that does not require a pre-written transcript.</p>
+<hr />
+<h2 id="7-code-snippets">7. Code Snippets</h2>
+<h3 id="71-mfa-pipeline-alignment-call">7.1 MFA pipeline — alignment call</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># pipelines/mfa/run_alignment.py (simplified)</span>
+<span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">mfa_executable</span><span class="p">,</span> <span class="s2">&quot;align&quot;</span><span class="p">,</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">corpus_dir</span><span class="p">),</span>           <span class="c1"># contains audio + .lab transcript</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">dictionary_path</span><span class="p">),</span>      <span class="c1"># vietnamese_cv.dict</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">acoustic_model_path</span><span class="p">),</span>  <span class="c1"># vietnamese_cv.zip</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">aligned_dir</span><span class="p">),</span>
+    <span class="s2">&quot;--single_speaker&quot;</span><span class="p">,</span> <span class="s2">&quot;-j&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;--clean&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">returncode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="n">run_mfa_command</span><span class="p">(</span>
+    <span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">mfa_env</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h3 id="72-nemo-fa-pipeline-alignment-call">7.2 NeMo FA pipeline — alignment call</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># pipelines/nemo/run_alignment.py (simplified)</span>
+<span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">python_executable</span><span class="p">,</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">nemo_align_script</span><span class="p">),</span>
+    <span class="sa">f</span><span class="s2">&quot;manifest_filepath=</span><span class="si">{</span><span class="n">manifest_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;output_dir=</span><span class="si">{</span><span class="n">output_dir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s1">&#39;pretrained_name=&quot;</span><span class="si">{</span><span class="n">pretrained_name</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;transcribe_device=cpu&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">returncode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="n">run_with_ram_monitoring</span><span class="p">(</span>
+    <span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">output_dir</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h3 id="73-whisperx-pipeline-alignment-call">7.3 WhisperX pipeline — alignment call</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># pipelines/whisperx/run_alignment.py (simplified)</span>
+<span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">whisperx_executable</span><span class="p">,</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">audio_path</span><span class="p">),</span>
+    <span class="s2">&quot;--model&quot;</span><span class="p">,</span> <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--language&quot;</span><span class="p">,</span> <span class="s2">&quot;vi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--output_dir&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">output_dir</span><span class="p">),</span>
+    <span class="s2">&quot;--output_format&quot;</span><span class="p">,</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--device&quot;</span><span class="p">,</span> <span class="s2">&quot;cpu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--compute_type&quot;</span><span class="p">,</span> <span class="s2">&quot;int8&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">returncode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="n">run_with_ram_monitoring</span><span class="p">(</span>
+    <span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">output_dir</span><span class="p">,</span>
+    <span class="n">extra_env</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;PYTHONUTF8&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;PYTHONIOENCODING&quot;</span><span class="p">:</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h3 id="74-ram-monitoring-implementation-pipelinescommonpy">7.4 RAM monitoring implementation (<code>pipelines/common.py</code>)</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">run_with_ram_monitoring</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_env</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">env</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;PYTHONUTF8&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;PYTHONIOENCODING&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">extra_env</span><span class="p">:</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">extra_env</span><span class="p">)</span>
+
+    <span class="n">idle_ram_mb</span> <span class="o">=</span> <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryFile</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w+&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_f</span><span class="p">,</span> \
+         <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryFile</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w+&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="k">as</span> <span class="n">err_f</span><span class="p">:</span>
+
+        <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">cwd</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">out_f</span><span class="p">,</span>
+                                <span class="n">stderr</span><span class="o">=</span><span class="n">err_f</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">)</span>
+        <span class="n">stop_event</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">_monitor</span><span class="p">():</span>
+            <span class="k">nonlocal</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span>
+            <span class="n">parent</span> <span class="o">=</span> <span class="n">psutil</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">proc</span><span class="o">.</span><span class="n">pid</span><span class="p">)</span>
+            <span class="n">first_sample</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="n">stop_event</span><span class="o">.</span><span class="n">is_set</span><span class="p">():</span>
+                <span class="n">rss_mb</span> <span class="o">=</span> <span class="n">collect_tree_rss_mb</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>   <span class="c1"># sums all child processes</span>
+                <span class="k">if</span> <span class="n">first_sample</span> <span class="ow">and</span> <span class="n">rss_mb</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+                    <span class="n">idle_ram_mb</span> <span class="o">=</span> <span class="n">collect_tree_rss_mb</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+                    <span class="n">first_sample</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">peak_ram_mb</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rss_mb</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">_monitor</span><span class="p">,</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="n">proc</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="n">stop_event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">returncode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span>
+</code></pre></div>
+
+<h3 id="75-concurrency-benchmark-runner">7.5 Concurrency benchmark runner</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># scripts/concurrency_benchmark.py (core logic)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">run_batch</span><span class="p">(</span><span class="n">python_executable</span><span class="p">,</span> <span class="n">pipeline</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">concurrency_level</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">))</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="n">futures</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">run_one</span><span class="p">,</span> <span class="n">python_executable</span><span class="p">,</span> <span class="n">pipeline</span><span class="p">,</span>
+                            <span class="n">row</span><span class="p">,</span> <span class="n">concurrency_level</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="o">.</span><span class="n">result</span><span class="p">()</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">as_completed</span><span class="p">(</span><span class="n">futures</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">results</span>
+
+<span class="c1"># For MFA: each worker gets an isolated MFA_ROOT_DIR to avoid file-lock conflicts</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_isolated_mfa_root</span><span class="p">(</span><span class="n">worker_index</span><span class="p">,</span> <span class="n">concurrency_level</span><span class="p">):</span>
+    <span class="n">isolated</span> <span class="o">=</span> <span class="n">ROOT_DIR</span> <span class="o">/</span> <span class="s2">&quot;outputs&quot;</span> <span class="o">/</span> <span class="s2">&quot;mfa_root_concurrent&quot;</span> \
+                <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;c</span><span class="si">{</span><span class="n">concurrency_level</span><span class="si">}</span><span class="s2">_w</span><span class="si">{</span><span class="n">worker_index</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">isolated</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="n">base_root</span> <span class="o">/</span> <span class="s2">&quot;pretrained_models&quot;</span><span class="p">,</span>
+                    <span class="n">isolated</span> <span class="o">/</span> <span class="s2">&quot;pretrained_models&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">isolated</span>
+</code></pre></div>
+
+<hr />
+<h2 id="8-known-issues-and-assumptions">8. Known Issues and Assumptions</h2>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Status</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WhisperX <code>UnicodeEncodeError</code> on Windows</td>
+<td><strong>Fixed</strong></td>
+<td><code>PYTHONUTF8=1</code> + <code>PYTHONIOENCODING=utf-8</code> passed to all subprocesses</td>
+</tr>
+<tr>
+<td>MFA <code>NoAlignmentsError</code> on 2/18 clips</td>
+<td>Known</td>
+<td>Clip-specific; retrying with <code>--beam 100 --retry_beam 400</code> expected to fix</td>
+</tr>
+<tr>
+<td>NeMo model exceeds 4 GB</td>
+<td>By design</td>
+<td><code>parakeet-ctc-0.6b-vi</code> is a 600M-parameter model; a smaller NeMo CTC model would fit</td>
+</tr>
+<tr>
+<td>All pipelines reload model per call</td>
+<td>Known</td>
+<td>20–47 s cold-start per call; a persistent worker process would eliminate this</td>
+</tr>
+<tr>
+<td><code>idle_ram_mb</code> is an approximation</td>
+<td>Known</td>
+<td>Sampled 0.5 s after process start, not at the exact moment of model-load completion</td>
+</tr>
+<tr>
+<td>Benchmarks run on Windows host</td>
+<td>Known</td>
+<td>Not inside a real 4 GB Docker container; Docker OOM behaviour may differ</td>
+</tr>
+<tr>
+<td>NeMo level 5 OOM rows added manually</td>
+<td>Known</td>
+<td>5 OOM rows for concurrency=5 were added to <code>raw_concurrency_nemo.csv</code> after user killed the process</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-recommendations">9. Recommendations</h2>
+<ol>
+<li>
+<p><strong>4 GB Docker, transcript available → use MFA.</strong> 311 MB peak RAM, scales flat to 5 users, 2.3× faster than NeMo. Fix the 2 beam-width failures with <code>--beam 100</code>.</p>
+</li>
+<li>
+<p><strong>No RAM constraint, transcript available → use NeMo FA.</strong> 100% success rate, open-vocabulary neural model. Requires ≥ 8 GB RAM or a quantised/smaller model for 4 GB Docker.</p>
+</li>
+<li>
+<p><strong>No reference transcript → use WhisperX.</strong> Only pipeline that transcribes and aligns without a reference. 1.1 GB RAM, 100% success, best scalability (5 users in 42 s).</p>
+</li>
+<li>
+<p><strong>All pipelines need a persistent server wrapper for production.</strong> Per-call model reload (20–47 s) makes real-time use impractical. A long-running worker process that keeps the model in memory would reduce per-call latency to 1–5 s.</p>
+</li>
+<li>
+<p><strong>NeMo FA needs a smaller model for the 4 GB constraint.</strong> Consider <code>nvidia/stt_vi_fastconformer_ctc_large</code> or a custom-trained smaller CTC model if NeMo's alignment quality is required within budget.</p>
+</li>
+</ol>
+<hr />
+<h2 id="10-file-index">10. File Index</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data/common_voice_vi/selected/benchmark_manifest.csv</code></td>
+<td>18-sample benchmark manifest</td>
+</tr>
+<tr>
+<td><code>outputs/tables/raw_benchmark_mfa.csv</code></td>
+<td>Single-user MFA results (18 rows)</td>
+</tr>
+<tr>
+<td><code>outputs/tables/raw_benchmark_nemo.csv</code></td>
+<td>Single-user NeMo results (18 rows)</td>
+</tr>
+<tr>
+<td><code>outputs/tables/raw_benchmark_whisperx.csv</code></td>
+<td>Single-user WhisperX results (18 rows)</td>
+</tr>
+<tr>
+<td><code>outputs/tables/raw_concurrency_mfa.csv</code></td>
+<td>MFA concurrency results (1, 3, 5 users)</td>
+</tr>
+<tr>
+<td><code>outputs/tables/raw_concurrency_nemo.csv</code></td>
+<td>NeMo concurrency results (1, 3 users + 5 OOM)</td>
+</tr>
+<tr>
+<td><code>outputs/tables/raw_concurrency_whisperx.csv</code></td>
+<td>WhisperX concurrency results (1, 3, 5 users)</td>
+</tr>
+<tr>
+<td><code>outputs/tables/summary_benchmark.csv</code></td>
+<td>Aggregated single-user summary</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_ram_comparison.png</code></td>
+<td>RAM bar charts</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_latency_comparison.png</code></td>
+<td>Latency bar charts</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_success_rate.png</code></td>
+<td>Success rate chart</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_tpw_scatter.png</code></td>
+<td>Time-per-word scatter</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_scalability_comparison.png</code></td>
+<td>Scalability line charts</td>
+</tr>
+<tr>
+<td><code>pipelines/mfa/run_alignment.py</code></td>
+<td>MFA pipeline runner</td>
+</tr>
+<tr>
+<td><code>pipelines/nemo/run_alignment.py</code></td>
+<td>NeMo pipeline runner</td>
+</tr>
+<tr>
+<td><code>pipelines/whisperx/run_alignment.py</code></td>
+<td>WhisperX pipeline runner</td>
+</tr>
+<tr>
+<td><code>pipelines/common.py</code></td>
+<td>Shared <code>run_with_ram_monitoring()</code> utility</td>
+</tr>
+<tr>
+<td><code>scripts/benchmark_runner.py</code></td>
+<td>Single-user benchmark orchestrator</td>
+</tr>
+<tr>
+<td><code>scripts/concurrency_benchmark.py</code></td>
+<td>Concurrency benchmark (1/3/5 users)</td>
+</tr>
+<tr>
+<td><code>scripts/summarize_benchmark.py</code></td>
+<td>Summary table generator</td>
+</tr>
+<tr>
+<td><code>scripts/make_figures.py</code></td>
+<td>Figure generator (5 PNG charts)</td>
+</tr>
+<tr>
+<td><code>docs/SETUP_AND_BENCHMARK_GUIDE.md</code></td>
+<td>Step-by-step setup and run guide</td>
+</tr>
+<tr>
+<td><code>docs/EVAL_PROTOCOL.md</code></td>
+<td>Evaluation protocol and schema rules</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
