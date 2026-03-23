@@ -1,0 +1,31 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&}Khiến gia đình rơi vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:00.00,00:00:00.88,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&}Khiến{\r}{\c&Hc7c1c2&} gia đình rơi vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:00.88,00:00:01.12,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&}Khiến{\r}{\c&Hc7c1c2&} gia đình rơi vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:01.12,00:00:01.20,Default,,0,0,0,,{\c&H3d2e31&}Khiến {\r}{\c&H9ab39&}gia{\r}{\c&Hc7c1c2&} đình rơi vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:01.20,00:00:01.36,Default,,0,0,0,,{\c&H3d2e31&}Khiến {\r}{\c&H3d2e31&}gia{\r}{\c&Hc7c1c2&} đình rơi vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:01.36,00:00:01.44,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia {\r}{\c&H9ab39&}đình{\r}{\c&Hc7c1c2&} rơi vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:01.44,00:00:01.76,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia {\r}{\c&H3d2e31&}đình{\r}{\c&Hc7c1c2&} rơi vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:01.76,00:00:01.92,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình {\r}{\c&H9ab39&}rơi{\r}{\c&Hc7c1c2&} vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:01.92,00:00:02.08,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình {\r}{\c&H3d2e31&}rơi{\r}{\c&Hc7c1c2&} vào cám cảnh đau thương{\r}
+Dialogue: 0,00:00:02.08,00:00:02.16,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi {\r}{\c&H9ab39&}vào{\r}{\c&Hc7c1c2&} cám cảnh đau thương{\r}
+Dialogue: 0,00:00:02.16,00:00:02.40,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi {\r}{\c&H3d2e31&}vào{\r}{\c&Hc7c1c2&} cám cảnh đau thương{\r}
+Dialogue: 0,00:00:02.40,00:00:02.56,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi vào {\r}{\c&H9ab39&}cám{\r}{\c&Hc7c1c2&} cảnh đau thương{\r}
+Dialogue: 0,00:00:02.56,00:00:02.80,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi vào {\r}{\c&H3d2e31&}cám{\r}{\c&Hc7c1c2&} cảnh đau thương{\r}
+Dialogue: 0,00:00:02.80,00:00:02.88,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi vào cám {\r}{\c&H9ab39&}cảnh{\r}{\c&Hc7c1c2&} đau thương{\r}
+Dialogue: 0,00:00:02.88,00:00:03.12,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi vào cám {\r}{\c&H3d2e31&}cảnh{\r}{\c&Hc7c1c2&} đau thương{\r}
+Dialogue: 0,00:00:03.12,00:00:03.28,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi vào cám cảnh {\r}{\c&H9ab39&}đau{\r}{\c&Hc7c1c2&} thương{\r}
+Dialogue: 0,00:00:03.28,00:00:03.36,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi vào cám cảnh {\r}{\c&H3d2e31&}đau{\r}{\c&Hc7c1c2&} thương{\r}
+Dialogue: 0,00:00:03.36,00:00:03.52,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi vào cám cảnh đau {\r}{\c&H9ab39&}thương{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:03.52,00:00:06.00,Default,,0,0,0,,{\c&H3d2e31&}Khiến gia đình rơi vào cám cảnh đau thương{\r}

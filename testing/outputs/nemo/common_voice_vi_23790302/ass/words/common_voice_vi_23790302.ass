@@ -1,0 +1,33 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&}Some trai bất giác giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:00.00,00:00:05.60,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&}Some{\r}{\c&Hc7c1c2&} trai bất giác giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:05.60,00:00:06.00,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&}Some{\r}{\c&Hc7c1c2&} trai bất giác giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:06.00,00:00:06.16,Default,,0,0,0,,{\c&H3d2e31&}Some {\r}{\c&H9ab39&}trai{\r}{\c&Hc7c1c2&} bất giác giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:06.16,00:00:06.64,Default,,0,0,0,,{\c&H3d2e31&}Some {\r}{\c&H3d2e31&}trai{\r}{\c&Hc7c1c2&} bất giác giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:06.64,00:00:06.72,Default,,0,0,0,,{\c&H3d2e31&}Some trai {\r}{\c&H9ab39&}bất{\r}{\c&Hc7c1c2&} giác giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:06.72,00:00:06.80,Default,,0,0,0,,{\c&H3d2e31&}Some trai {\r}{\c&H3d2e31&}bất{\r}{\c&Hc7c1c2&} giác giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:06.80,00:00:06.96,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất {\r}{\c&H9ab39&}giác{\r}{\c&Hc7c1c2&} giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:06.96,00:00:07.28,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất {\r}{\c&H3d2e31&}giác{\r}{\c&Hc7c1c2&} giật mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:07.28,00:00:07.44,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác {\r}{\c&H9ab39&}giật{\r}{\c&Hc7c1c2&} mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:07.44,00:00:07.76,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác {\r}{\c&H3d2e31&}giật{\r}{\c&Hc7c1c2&} mình hắn ta vội vàng{\r}
+Dialogue: 0,00:00:07.76,00:00:07.84,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật {\r}{\c&H9ab39&}mình{\r}{\c&Hc7c1c2&} hắn ta vội vàng{\r}
+Dialogue: 0,00:00:07.84,00:00:08.24,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật {\r}{\c&H3d2e31&}mình{\r}{\c&Hc7c1c2&} hắn ta vội vàng{\r}
+Dialogue: 0,00:00:08.24,00:00:08.40,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật mình {\r}{\c&H9ab39&}hắn{\r}{\c&Hc7c1c2&} ta vội vàng{\r}
+Dialogue: 0,00:00:08.40,00:00:08.72,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật mình {\r}{\c&H3d2e31&}hắn{\r}{\c&Hc7c1c2&} ta vội vàng{\r}
+Dialogue: 0,00:00:08.72,00:00:08.80,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật mình hắn {\r}{\c&H9ab39&}ta{\r}{\c&Hc7c1c2&} vội vàng{\r}
+Dialogue: 0,00:00:08.80,00:00:08.96,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật mình hắn {\r}{\c&H3d2e31&}ta{\r}{\c&Hc7c1c2&} vội vàng{\r}
+Dialogue: 0,00:00:08.96,00:00:09.12,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật mình hắn ta {\r}{\c&H9ab39&}vội{\r}{\c&Hc7c1c2&} vàng{\r}
+Dialogue: 0,00:00:09.12,00:00:09.28,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật mình hắn ta {\r}{\c&H3d2e31&}vội{\r}{\c&Hc7c1c2&} vàng{\r}
+Dialogue: 0,00:00:09.28,00:00:09.44,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật mình hắn ta vội {\r}{\c&H9ab39&}vàng{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:09.44,00:00:12.00,Default,,0,0,0,,{\c&H3d2e31&}Some trai bất giác giật mình hắn ta vội vàng{\r}

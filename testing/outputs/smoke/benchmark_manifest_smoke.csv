@@ -1,0 +1,2 @@
+audio_id,audio_path,transcript_ref,audio_duration_sec,num_words
+mfa-smoke,outputs/smoke/sample.wav,xin chao,1.0,2

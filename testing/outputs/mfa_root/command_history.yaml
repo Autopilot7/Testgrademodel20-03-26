@@ -1,0 +1,500 @@
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:00:58.461522
+  exception: ''
+  execution_time: 14.056723356246948
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23078761\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23078761\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:01:15.910884
+  exception: ''
+  execution_time: 14.731564283370972
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25255203\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25255203\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:01:34.803147
+  exception: ''
+  execution_time: 12.039849996566772
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_40191822\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_40191822\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:01:51.418472
+  exception: ''
+  execution_time: 11.742364645004272
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23848884\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23848884\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:02:06.778036
+  exception: ''
+  execution_time: 14.201910257339478
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24458318\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24458318\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:02:25.061575
+  exception: ''
+  execution_time: 18.81959056854248
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24358791\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24358791\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:02:47.789752
+  exception: ''
+  execution_time: 14.081713914871216
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25721631\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25721631\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:03:05.369988
+  exception: ''
+  execution_time: 14.82972764968872
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24535241\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24535241\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:03:25.037526
+  exception: ''
+  execution_time: 7.701061010360718
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:05:14.875230
+  exception: ''
+  execution_time: 13.825484275817871
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24122210\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24122210\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:05:34.130034
+  exception: ''
+  execution_time: 16.63274621963501
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:05:55.449998
+  exception: ''
+  execution_time: 16.58455753326416
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23078761\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23078761\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:06:16.624730
+  exception: ''
+  execution_time: 13.648464918136597
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25255203\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25255203\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:06:35.013586
+  exception: ''
+  execution_time: 12.074761390686035
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_40191822\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_40191822\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:06:51.421285
+  exception: ''
+  execution_time: 12.172884464263916
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23848884\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23848884\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:07:07.803617
+  exception: ''
+  execution_time: 14.295966625213623
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24458318\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24458318\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:07:26.193680
+  exception: ''
+  execution_time: 14.090149879455566
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24358791\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24358791\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:07:44.383248
+  exception: ''
+  execution_time: 15.352100610733032
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25721631\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25721631\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:08:04.319341
+  exception: ''
+  execution_time: 14.07422137260437
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24535241\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24535241\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:08:23.093320
+  exception: ''
+  execution_time: 14.98911166191101
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24777470\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24777470\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:08:42.424211
+  exception: ''
+  execution_time: 14.635176181793213
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23926747\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23926747\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:09:01.545681
+  exception: ''
+  execution_time: 14.391047954559326
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_22493633\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_22493633\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:09:20.377559
+  exception: ''
+  execution_time: 14.803757667541504
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23988590\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23988590\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:09:39.584394
+  exception: ''
+  execution_time: 13.803575038909912
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24142510\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24142510\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:09:58.226090
+  exception: ''
+  execution_time: 13.660208225250244
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25265405\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25265405\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:10:16.264607
+  exception: ''
+  execution_time: 13.935444831848145
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23790302\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23790302\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 22:10:34.830915
+  exception: ''
+  execution_time: 15.04585313796997
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:30:27.491001
+  exception: ''
+  execution_time: 18.70137357711792
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24122210\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24122210\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:30:51.075575
+  exception: ''
+  execution_time: 14.829010248184204
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:31:10.719165
+  exception: ''
+  execution_time: 14.34451961517334
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23078761\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23078761\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:31:29.585817
+  exception: ''
+  execution_time: 14.665929555892944
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25255203\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25255203\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:31:49.600389
+  exception: ''
+  execution_time: 13.103204727172852
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_40191822\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_40191822\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:32:07.162960
+  exception: ''
+  execution_time: 12.41504430770874
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23848884\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23848884\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:32:25.006970
+  exception: ''
+  execution_time: 14.844756126403809
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24458318\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24458318\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:32:44.362681
+  exception: ''
+  execution_time: 15.709191083908081
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24358791\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24358791\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:33:05.201286
+  exception: ''
+  execution_time: 14.436874628067017
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25721631\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25721631\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:33:24.302192
+  exception: ''
+  execution_time: 16.541462898254395
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24535241\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24535241\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:33:45.836737
+  exception: ''
+  execution_time: 14.360639095306396
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24777470\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24777470\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:34:04.606570
+  exception: ''
+  execution_time: 16.335267305374146
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23926747\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23926747\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:34:26.295673
+  exception: ''
+  execution_time: 15.268443822860718
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_22493633\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_22493633\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:34:46.847957
+  exception: ''
+  execution_time: 16.956905364990234
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23988590\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23988590\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:35:09.237229
+  exception: ''
+  execution_time: 15.936706066131592
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24142510\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24142510\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:35:30.932450
+  exception: ''
+  execution_time: 18.554182052612305
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25265405\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25265405\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:35:56.174911
+  exception: ''
+  execution_time: 15.85454511642456
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23790302\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_23790302\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:36:19.166208
+  exception: ''
+  execution_time: 18.369343996047974
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172_c1\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172_c1\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:57:05.899388
+  exception: ''
+  execution_time: 15.249858856201172
+  exit_code: 0
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24122210_c3\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24122210_c3\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:57:26.069155
+  exception: ''
+  execution_time: 0.5732755661010742
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172_c3\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172_c3\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:57:26.065742
+  exception: ''
+  execution_time: 10.08356761932373
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724_c5\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724_c5\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-23 23:57:41.351693
+  exception: ''
+  execution_time: 0.5295281410217285
+  exit_code: 1
+  version: 3.3.9
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172_c1_w0\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172_c1_w0\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-24 00:00:39.808256
+  exception: ''
+  execution_time: 13.686120986938477
+  exit_code: 0
+  version: 3.3.9

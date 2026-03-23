@@ -1,0 +1,2 @@
+file,begin,end,speaker,overall_log_likelihood,speech_log_likelihood,phone_duration_deviation,snr
+common_voice_vi_24358791,0.0,4.716,corpus,-56.58107962101064,-53.43737302507673,1.019020548866022,5.6663534364403425

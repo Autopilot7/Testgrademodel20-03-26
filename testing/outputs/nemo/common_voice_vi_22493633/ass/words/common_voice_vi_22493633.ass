@@ -1,0 +1,27 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&}Trời ơi người ấy có buồn không{\r}
+Dialogue: 0,00:00:00.00,00:00:01.28,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&}Trời{\r}{\c&Hc7c1c2&} ơi người ấy có buồn không{\r}
+Dialogue: 0,00:00:01.28,00:00:01.44,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&}Trời{\r}{\c&Hc7c1c2&} ơi người ấy có buồn không{\r}
+Dialogue: 0,00:00:01.44,00:00:01.60,Default,,0,0,0,,{\c&H3d2e31&}Trời {\r}{\c&H9ab39&}ơi{\r}{\c&Hc7c1c2&} người ấy có buồn không{\r}
+Dialogue: 0,00:00:01.60,00:00:01.92,Default,,0,0,0,,{\c&H3d2e31&}Trời {\r}{\c&H3d2e31&}ơi{\r}{\c&Hc7c1c2&} người ấy có buồn không{\r}
+Dialogue: 0,00:00:01.92,00:00:02.00,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi {\r}{\c&H9ab39&}người{\r}{\c&Hc7c1c2&} ấy có buồn không{\r}
+Dialogue: 0,00:00:02.00,00:00:02.16,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi {\r}{\c&H3d2e31&}người{\r}{\c&Hc7c1c2&} ấy có buồn không{\r}
+Dialogue: 0,00:00:02.16,00:00:02.24,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi người {\r}{\c&H9ab39&}ấy{\r}{\c&Hc7c1c2&} có buồn không{\r}
+Dialogue: 0,00:00:02.24,00:00:02.48,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi người {\r}{\c&H3d2e31&}ấy{\r}{\c&Hc7c1c2&} có buồn không{\r}
+Dialogue: 0,00:00:02.48,00:00:02.56,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi người ấy {\r}{\c&H9ab39&}có{\r}{\c&Hc7c1c2&} buồn không{\r}
+Dialogue: 0,00:00:02.56,00:00:02.72,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi người ấy {\r}{\c&H3d2e31&}có{\r}{\c&Hc7c1c2&} buồn không{\r}
+Dialogue: 0,00:00:02.72,00:00:02.88,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi người ấy có {\r}{\c&H9ab39&}buồn{\r}{\c&Hc7c1c2&} không{\r}
+Dialogue: 0,00:00:02.88,00:00:03.20,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi người ấy có {\r}{\c&H3d2e31&}buồn{\r}{\c&Hc7c1c2&} không{\r}
+Dialogue: 0,00:00:03.20,00:00:03.28,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi người ấy có buồn {\r}{\c&H9ab39&}không{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:03.28,00:00:10.00,Default,,0,0,0,,{\c&H3d2e31&}Trời ơi người ấy có buồn không{\r}

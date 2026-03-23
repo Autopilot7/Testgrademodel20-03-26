@@ -1,0 +1,2 @@
+pipeline,audio_id,audio_duration_sec,num_words,load_time_sec,idle_ram_mb,peak_ram_mb,total_time_sec,time_per_word_sec,concurrency_level,success,notes
+mfa,common_voice_vi_25132172,1.368000,2,,,,0.327626,0.163813,1,False,MFA executable not found: mfa | exit_code=1

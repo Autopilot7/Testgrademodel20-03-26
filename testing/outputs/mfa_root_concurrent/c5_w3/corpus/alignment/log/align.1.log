@@ -1,0 +1,15 @@
+2026-03-24 00:01:29,601 - kalpy.align - 17700 - 1 - DEBUG - Align options: {'transition_scale': 1.0, 'acoustic_scale': 0.083333, 'self_loop_scale': 0.1, 'beam': 10, 'retry_beam': 40, 'boost_silence': 1.0, 'careful': False}
+2026-03-24 00:01:29,683 - kalpy.align - 17700 - 1 - DEBUG - Aligning for dictionary vietnamese_cv (1)
+2026-03-24 00:01:29,683 - kalpy.align - 17700 - 1 - DEBUG - Aligning with model: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c5_w3\corpus\alignment\final.mdl
+2026-03-24 00:01:29,683 - kalpy.align - 17700 - 1 - DEBUG - Training graph archive: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c5_w3\corpus\alignment\fsts.vietnamese_cv.1.ark
+2026-03-24 00:01:29,707 - kalpy.align - 17700 - 1 - DEBUG - Feature Archive information:
+2026-03-24 00:01:29,707 - kalpy.align - 17700 - 1 - DEBUG - Archive: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c5_w3\corpus\corpus\split1\feats.vietnamese_cv.1.scp
+2026-03-24 00:01:29,707 - kalpy.align - 17700 - 1 - DEBUG - CMVN: None
+2026-03-24 00:01:29,707 - kalpy.align - 17700 - 1 - DEBUG - Deltas: False
+2026-03-24 00:01:29,707 - kalpy.align - 17700 - 1 - DEBUG - Splices: True
+2026-03-24 00:01:29,707 - kalpy.align - 17700 - 1 - DEBUG - LDA: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c5_w3\corpus\alignment\lda.mat
+2026-03-24 00:01:29,707 - kalpy.align - 17700 - 1 - DEBUG - fMLLR: None
+2026-03-24 00:01:29,723 - kalpy.align - 17700 - 1 - DEBUG - Aligning with C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c5_w3\corpus\alignment\final.mdl
+2026-03-24 00:01:29,737 - kalpy.align - 17700 - 1 - DEBUG - Processing 1-1
+2026-03-24 00:01:29,743 - kalpy.align - 17700 - 1 - INFO - Overall log-likelihood per frame is -66.46002339207848 over 344 frames.
+2026-03-24 00:01:29,743 - kalpy.align - 17700 - 1 - INFO - Done 1, errors on 0

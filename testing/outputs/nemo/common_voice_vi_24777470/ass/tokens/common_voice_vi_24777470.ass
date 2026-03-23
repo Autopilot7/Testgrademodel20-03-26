@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:00.00,00:00:00.08,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&} Khi{\r}{\c&Hc7c1c2&} cụ nghe xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:00.08,00:00:01.12,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&} Khi{\r}{\c&Hc7c1c2&} cụ nghe xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:01.12,00:00:01.20,Default,,0,0,0,,{\c&H3d2e31&} Khi{\r}{\c&H9ab39&} c{\r}{\c&Hc7c1c2&}ụ nghe xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:01.20,00:00:01.28,Default,,0,0,0,,{\c&H3d2e31&} Khi c{\r}{\c&H9ab39&}ụ{\r}{\c&Hc7c1c2&} nghe xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:01.28,00:00:01.68,Default,,0,0,0,,{\c&H3d2e31&} Khi c{\r}{\c&H3d2e31&}ụ{\r}{\c&Hc7c1c2&} nghe xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:01.68,00:00:01.76,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ{\r}{\c&H9ab39&} nghe{\r}{\c&Hc7c1c2&} xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:01.76,00:00:01.92,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ{\r}{\c&H3d2e31&} nghe{\r}{\c&Hc7c1c2&} xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:01.92,00:00:02.08,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe{\r}{\c&H9ab39&} xong{\r}{\c&Hc7c1c2&} liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:02.08,00:00:02.48,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe{\r}{\c&H3d2e31&} xong{\r}{\c&Hc7c1c2&} liền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:02.48,00:00:02.56,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong{\r}{\c&H9ab39&} l{\r}{\c&Hc7c1c2&}iền gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:02.56,00:00:02.64,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong l{\r}{\c&H9ab39&}iền{\r}{\c&Hc7c1c2&} gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:02.64,00:00:02.88,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong l{\r}{\c&H3d2e31&}iền{\r}{\c&Hc7c1c2&} gật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:02.88,00:00:02.96,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền{\r}{\c&H9ab39&} g{\r}{\c&Hc7c1c2&}ật đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:02.96,00:00:03.04,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền g{\r}{\c&H9ab39&}ật{\r}{\c&Hc7c1c2&} đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:03.04,00:00:03.20,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền g{\r}{\c&H3d2e31&}ật{\r}{\c&Hc7c1c2&} đầu, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:03.20,00:00:03.36,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật{\r}{\c&H9ab39&} đầu{\r}{\c&Hc7c1c2&}, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:03.36,00:00:04.00,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật{\r}{\c&H3d2e31&} đầu{\r}{\c&Hc7c1c2&}, trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:04.00,00:00:04.08,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu{\r}{\c&H9ab39&},{\r}{\c&Hc7c1c2&} trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:04.08,00:00:04.24,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu{\r}{\c&H3d2e31&},{\r}{\c&Hc7c1c2&} trả lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:04.24,00:00:04.32,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu,{\r}{\c&H9ab39&} trả{\r}{\c&Hc7c1c2&} lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:04.32,00:00:04.56,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu,{\r}{\c&H3d2e31&} trả{\r}{\c&Hc7c1c2&} lời với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:04.56,00:00:04.64,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả{\r}{\c&H9ab39&} lời{\r}{\c&Hc7c1c2&} với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:04.64,00:00:04.88,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả{\r}{\c&H3d2e31&} lời{\r}{\c&Hc7c1c2&} với cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:04.88,00:00:04.96,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời{\r}{\c&H9ab39&} với{\r}{\c&Hc7c1c2&} cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:04.96,00:00:05.12,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời{\r}{\c&H3d2e31&} với{\r}{\c&Hc7c1c2&} cái giọng ồm ồm{\r}
+Dialogue: 0,00:00:05.12,00:00:05.20,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với{\r}{\c&H9ab39&} cái{\r}{\c&Hc7c1c2&} giọng ồm ồm{\r}
+Dialogue: 0,00:00:05.20,00:00:05.36,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với{\r}{\c&H3d2e31&} cái{\r}{\c&Hc7c1c2&} giọng ồm ồm{\r}
+Dialogue: 0,00:00:05.36,00:00:05.44,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái{\r}{\c&H9ab39&} gi{\r}{\c&Hc7c1c2&}ọng ồm ồm{\r}
+Dialogue: 0,00:00:05.44,00:00:05.52,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái gi{\r}{\c&H9ab39&}ọng{\r}{\c&Hc7c1c2&} ồm ồm{\r}
+Dialogue: 0,00:00:05.52,00:00:05.76,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái gi{\r}{\c&H3d2e31&}ọng{\r}{\c&Hc7c1c2&} ồm ồm{\r}
+Dialogue: 0,00:00:05.76,00:00:05.84,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng{\r}{\c&H9ab39&} {\r}{\c&Hc7c1c2&}ồm ồm{\r}
+Dialogue: 0,00:00:05.84,00:00:05.92,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng {\r}{\c&H9ab39&}ồ{\r}{\c&Hc7c1c2&}m ồm{\r}
+Dialogue: 0,00:00:05.92,00:00:06.08,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng ồ{\r}{\c&H9ab39&}m{\r}{\c&Hc7c1c2&} ồm{\r}
+Dialogue: 0,00:00:06.08,00:00:06.24,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng ồ{\r}{\c&H3d2e31&}m{\r}{\c&Hc7c1c2&} ồm{\r}
+Dialogue: 0,00:00:06.24,00:00:06.32,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng ồm{\r}{\c&H9ab39&} {\r}{\c&Hc7c1c2&}ồm{\r}
+Dialogue: 0,00:00:06.32,00:00:06.40,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng ồm {\r}{\c&H9ab39&}ồ{\r}{\c&Hc7c1c2&}m{\r}
+Dialogue: 0,00:00:06.40,00:00:06.48,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng ồm ồ{\r}{\c&H9ab39&}m{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:06.48,00:00:09.00,Default,,0,0,0,,{\c&H3d2e31&} Khi cụ nghe xong liền gật đầu, trả lời với cái giọng ồm ồm{\r}

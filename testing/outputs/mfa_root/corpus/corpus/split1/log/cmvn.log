@@ -1,0 +1,4 @@
+2026-03-24 00:00:46,611 - kalpy.cmvn - INFO - Reading features from: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\corpus\corpus\feats.scp
+2026-03-24 00:00:46,612 - kalpy.cmvn - INFO - Reading spk2utt from: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\corpus\corpus\spk2utt.scp
+2026-03-24 00:00:46,621 - kalpy.cmvn - DEBUG - Writing to: ark,scp:C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\corpus\corpus\cmvn.ark,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\corpus\corpus\cmvn.scp
+2026-03-24 00:00:46,622 - kalpy.cmvn - INFO - Processing speaker 1: 1 utterances

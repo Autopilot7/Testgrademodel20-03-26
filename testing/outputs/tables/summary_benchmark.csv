@@ -1,0 +1,4 @@
+pipeline,n_samples,n_success,n_failure,success_rate_pct,load_time_mean_sec,load_time_median_sec,idle_ram_mean_mb,peak_ram_mean_mb,peak_ram_max_mb,total_time_mean_sec,total_time_median_sec,time_per_word_mean_sec,time_per_word_median_sec,notes
+mfa,18,16,2,88.9,20.677,20.181,45.0,311.4,313.9,20.923,20.414,3.197,2.507,
+nemo,18,18,0,100.0,46.625,47.568,73.4,5278.9,5280.1,46.910,47.869,6.640,5.579,
+whisperx,18,18,0,100.0,46.731,47.356,45.7,1067.3,1146.5,47.071,47.760,6.782,5.625,

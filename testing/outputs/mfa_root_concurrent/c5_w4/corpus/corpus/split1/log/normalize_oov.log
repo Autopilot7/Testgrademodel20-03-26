@@ -1,0 +1,3 @@
+Found the following OOVs:
+{}
+{(1, 'sớm'): {'id': 2080, 'word': 'sớm', 'word_type': <WordType.oov: 4>, 'mapping_id': 2079, 'count': 1, 'dictionary_id': 1, 'included': False}}

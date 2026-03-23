@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&}Chỉ mở mắt ra nằm yên trong đó{\r}
+Dialogue: 0,00:00:00.00,00:00:00.72,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&}Chỉ{\r}{\c&Hc7c1c2&} mở mắt ra nằm yên trong đó{\r}
+Dialogue: 0,00:00:00.72,00:00:00.96,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&}Chỉ{\r}{\c&Hc7c1c2&} mở mắt ra nằm yên trong đó{\r}
+Dialogue: 0,00:00:00.96,00:00:01.04,Default,,0,0,0,,{\c&H3d2e31&}Chỉ {\r}{\c&H9ab39&}mở{\r}{\c&Hc7c1c2&} mắt ra nằm yên trong đó{\r}
+Dialogue: 0,00:00:01.04,00:00:01.20,Default,,0,0,0,,{\c&H3d2e31&}Chỉ {\r}{\c&H3d2e31&}mở{\r}{\c&Hc7c1c2&} mắt ra nằm yên trong đó{\r}
+Dialogue: 0,00:00:01.20,00:00:01.28,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở {\r}{\c&H9ab39&}mắt{\r}{\c&Hc7c1c2&} ra nằm yên trong đó{\r}
+Dialogue: 0,00:00:01.28,00:00:01.52,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở {\r}{\c&H3d2e31&}mắt{\r}{\c&Hc7c1c2&} ra nằm yên trong đó{\r}
+Dialogue: 0,00:00:01.52,00:00:01.60,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt {\r}{\c&H9ab39&}ra{\r}{\c&Hc7c1c2&} nằm yên trong đó{\r}
+Dialogue: 0,00:00:01.60,00:00:02.08,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt {\r}{\c&H3d2e31&}ra{\r}{\c&Hc7c1c2&} nằm yên trong đó{\r}
+Dialogue: 0,00:00:02.08,00:00:02.24,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt ra {\r}{\c&H9ab39&}nằm{\r}{\c&Hc7c1c2&} yên trong đó{\r}
+Dialogue: 0,00:00:02.24,00:00:02.40,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt ra {\r}{\c&H3d2e31&}nằm{\r}{\c&Hc7c1c2&} yên trong đó{\r}
+Dialogue: 0,00:00:02.40,00:00:02.56,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt ra nằm {\r}{\c&H9ab39&}yên{\r}{\c&Hc7c1c2&} trong đó{\r}
+Dialogue: 0,00:00:02.56,00:00:02.80,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt ra nằm {\r}{\c&H3d2e31&}yên{\r}{\c&Hc7c1c2&} trong đó{\r}
+Dialogue: 0,00:00:02.80,00:00:02.88,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt ra nằm yên {\r}{\c&H9ab39&}trong{\r}{\c&Hc7c1c2&} đó{\r}
+Dialogue: 0,00:00:02.88,00:00:03.04,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt ra nằm yên {\r}{\c&H3d2e31&}trong{\r}{\c&Hc7c1c2&} đó{\r}
+Dialogue: 0,00:00:03.04,00:00:03.12,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt ra nằm yên trong {\r}{\c&H9ab39&}đó{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:03.12,00:00:06.00,Default,,0,0,0,,{\c&H3d2e31&}Chỉ mở mắt ra nằm yên trong đó{\r}

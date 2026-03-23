@@ -1,0 +1,353 @@
+2026-03-24 00:01:19,144 - mfa - DEBUG - Beginning run for corpus
+2026-03-24 00:01:19,144 - mfa - DEBUG - Using "global" profile
+2026-03-24 00:01:19,145 - mfa - DEBUG - Using multiprocessing with 1
+2026-03-24 00:01:19,145 - mfa - DEBUG - Set up logger for MFA version: 3.3.9
+2026-03-24 00:01:19,145 - mfa - DEBUG - Cleaned previous run
+2026-03-24 00:01:19,145 - mfa - WARNING - Skipped the following configuration keys: pitch
+2026-03-24 00:01:19,735 - mfa - DEBUG - There were some differences in the current run compared to the last one. This may cause issues, run with --clean, if you hit an error.
+2026-03-24 00:01:19,799 - mfa - DEBUG - Skipping "bơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,799 - mfa - DEBUG - Skipping "bởi" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,801 - mfa - DEBUG - Skipping "chợt" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,801 - mfa - DEBUG - Skipping "cơm" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,802 - mfa - DEBUG - Skipping "cơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,802 - mfa - DEBUG - Skipping "giơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,803 - mfa - DEBUG - Skipping "giờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,803 - mfa - DEBUG - Skipping "giới" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,803 - mfa - DEBUG - Skipping "hơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,804 - mfa - DEBUG - Skipping "hơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,805 - mfa - DEBUG - Skipping "lời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,805 - mfa - DEBUG - Skipping "lợi" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,806 - mfa - DEBUG - Skipping "mơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,806 - mfa - DEBUG - Skipping "mờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,806 - mfa - DEBUG - Skipping "mở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,806 - mfa - DEBUG - Skipping "mới" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,806 - mfa - DEBUG - Skipping "mời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,807 - mfa - DEBUG - Skipping "ngỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,808 - mfa - DEBUG - Skipping "nhớ" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,808 - mfa - DEBUG - Skipping "nhờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,808 - mfa - DEBUG - Skipping "nơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,809 - mfa - DEBUG - Skipping "sợ" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,810 - mfa - DEBUG - Skipping "sơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,810 - mfa - DEBUG - Skipping "thơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,811 - mfa - DEBUG - Skipping "thở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,811 - mfa - DEBUG - Skipping "thời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,812 - mfa - DEBUG - Skipping "trở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,812 - mfa - DEBUG - Skipping "trợ" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,812 - mfa - DEBUG - Skipping "trời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,813 - mfa - DEBUG - Skipping "vớ" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,813 - mfa - DEBUG - Skipping "vỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,813 - mfa - DEBUG - Skipping "vợ" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,813 - mfa - DEBUG - Skipping "với" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,813 - mfa - DEBUG - Skipping "vời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,815 - mfa - DEBUG - Skipping "bơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,815 - mfa - DEBUG - Skipping "bờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,816 - mfa - DEBUG - Skipping "bởi" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,816 - mfa - DEBUG - Skipping "bớt" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,818 - mfa - DEBUG - Skipping "chớ" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,818 - mfa - DEBUG - Skipping "chờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,818 - mfa - DEBUG - Skipping "chở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,818 - mfa - DEBUG - Skipping "chợ" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,818 - mfa - DEBUG - Skipping "chơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,819 - mfa - DEBUG - Skipping "chờn" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,819 - mfa - DEBUG - Skipping "chớp" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,819 - mfa - DEBUG - Skipping "chợp" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,819 - mfa - DEBUG - Skipping "chợt" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,820 - mfa - DEBUG - Skipping "cơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,820 - mfa - DEBUG - Skipping "cỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,820 - mfa - DEBUG - Skipping "cởi" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,820 - mfa - DEBUG - Skipping "cơm" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,820 - mfa - DEBUG - Skipping "cơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,822 - mfa - DEBUG - Skipping "dở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,822 - mfa - DEBUG - Skipping "dơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,822 - mfa - DEBUG - Skipping "dớn" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,822 - mfa - DEBUG - Skipping "dờn" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,824 - mfa - DEBUG - Skipping "giờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,824 - mfa - DEBUG - Skipping "giới" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,824 - mfa - DEBUG - Skipping "giởi" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,824 - mfa - DEBUG - Skipping "gỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,824 - mfa - DEBUG - Skipping "gợi" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,826 - mfa - DEBUG - Skipping "hờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,826 - mfa - DEBUG - Skipping "hở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,826 - mfa - DEBUG - Skipping "hơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,826 - mfa - DEBUG - Skipping "hởi" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,827 - mfa - DEBUG - Skipping "hơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,827 - mfa - DEBUG - Skipping "hớn" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,827 - mfa - DEBUG - Skipping "hờn" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,827 - mfa - DEBUG - Skipping "hợp" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,828 - mfa - DEBUG - Skipping "hớt" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,828 - mfa - DEBUG - Skipping "khờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,829 - mfa - DEBUG - Skipping "khơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,831 - mfa - DEBUG - Skipping "lơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,831 - mfa - DEBUG - Skipping "lờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,831 - mfa - DEBUG - Skipping "lỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,831 - mfa - DEBUG - Skipping "lời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,831 - mfa - DEBUG - Skipping "lợi" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,832 - mfa - DEBUG - Skipping "lơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,832 - mfa - DEBUG - Skipping "lớn" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,832 - mfa - DEBUG - Skipping "lớp" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,833 - mfa - DEBUG - Skipping "mơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,833 - mfa - DEBUG - Skipping "mờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,833 - mfa - DEBUG - Skipping "mở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,834 - mfa - DEBUG - Skipping "mới" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,834 - mfa - DEBUG - Skipping "mời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,834 - mfa - DEBUG - Skipping "mơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,834 - mfa - DEBUG - Skipping "mộtchờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,837 - mfa - DEBUG - Skipping "ngơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,837 - mfa - DEBUG - Skipping "ngờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,837 - mfa - DEBUG - Skipping "ngỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,837 - mfa - DEBUG - Skipping "ngơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,837 - mfa - DEBUG - Skipping "ngời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,837 - mfa - DEBUG - Skipping "ngợm" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,838 - mfa - DEBUG - Skipping "nhớ" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,839 - mfa - DEBUG - Skipping "nhờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,839 - mfa - DEBUG - Skipping "nhờn" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,840 - mfa - DEBUG - Skipping "nở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,840 - mfa - DEBUG - Skipping "nơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,841 - mfa - DEBUG - Skipping "phớt" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,842 - mfa - DEBUG - Skipping "rỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,843 - mfa - DEBUG - Skipping "rơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,843 - mfa - DEBUG - Skipping "rời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,843 - mfa - DEBUG - Skipping "rờn" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,843 - mfa - DEBUG - Skipping "rợn" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,844 - mfa - DEBUG - Skipping "rớp" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,844 - mfa - DEBUG - Skipping "rợp" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,844 - mfa - DEBUG - Skipping "rớt" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,845 - mfa - DEBUG - Skipping "sờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,845 - mfa - DEBUG - Skipping "sợ" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,845 - mfa - DEBUG - Skipping "sợi" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,845 - mfa - DEBUG - Skipping "sớm" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,847 - mfa - DEBUG - Skipping "thuở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,847 - mfa - DEBUG - Skipping "thơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,847 - mfa - DEBUG - Skipping "thờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,848 - mfa - DEBUG - Skipping "thở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,848 - mfa - DEBUG - Skipping "thợ" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,848 - mfa - DEBUG - Skipping "thời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,848 - mfa - DEBUG - Skipping "thơm" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,850 - mfa - DEBUG - Skipping "trơ" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,850 - mfa - DEBUG - Skipping "trở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,850 - mfa - DEBUG - Skipping "trời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,851 - mfa - DEBUG - Skipping "trớn" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,851 - mfa - DEBUG - Skipping "tớ" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,851 - mfa - DEBUG - Skipping "tờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,852 - mfa - DEBUG - Skipping "tới" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,854 - mfa - DEBUG - Skipping "vờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,854 - mfa - DEBUG - Skipping "vở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,854 - mfa - DEBUG - Skipping "vỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,854 - mfa - DEBUG - Skipping "vợ" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,855 - mfa - DEBUG - Skipping "với" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,855 - mfa - DEBUG - Skipping "vời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,855 - mfa - DEBUG - Skipping "vợi" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,855 - mfa - DEBUG - Skipping "vờn" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,856 - mfa - DEBUG - Skipping "ờ" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,857 - mfa - DEBUG - Skipping "ở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,857 - mfa - DEBUG - Skipping "ở" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,858 - mfa - DEBUG - Skipping "ơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,858 - mfa - DEBUG - Skipping "ơi" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,858 - mfa - DEBUG - Skipping "ơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,858 - mfa - DEBUG - Skipping "ởn" for containing a phone not in the acoustic model: ɤː˧˩˧.
+2026-03-24 00:01:19,859 - mfa - DEBUG - Skipping "ớt" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,860 - mfa - DEBUG - Skipping "đỡ" for containing a phone not in the acoustic model: ɤː˧˥ˀ.
+2026-03-24 00:01:19,860 - mfa - DEBUG - Skipping "đời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,860 - mfa - DEBUG - Skipping "đợi" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,861 - mfa - DEBUG - Skipping "đời" for containing a phone not in the acoustic model: ɤː˨˩.
+2026-03-24 00:01:19,861 - mfa - DEBUG - Skipping "đợi" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:19,861 - mfa - DEBUG - Skipping "đơn" for containing a phone not in the acoustic model: ɤː˧.
+2026-03-24 00:01:19,861 - mfa - DEBUG - Skipping "đớn" for containing a phone not in the acoustic model: ɤː˧˥.
+2026-03-24 00:01:19,862 - mfa - DEBUG - Skipping "đợt" for containing a phone not in the acoustic model: ɤː˨˩ˀ.
+2026-03-24 00:01:20,097 - mfa - DEBUG - Loaded dictionary in 0.312 seconds
+2026-03-24 00:01:20,098 - mfa - INFO - Setting up corpus information...
+2026-03-24 00:01:20,100 - mfa - DEBUG - Could not load from temp
+2026-03-24 00:01:20,100 - mfa - INFO - Loading corpus from source files...
+2026-03-24 00:01:22,136 - mfa - DEBUG - Processing queue: 0.03125
+2026-03-24 00:01:22,191 - mfa - DEBUG - Parsed corpus directory with 1 jobs in 0.078125 seconds
+2026-03-24 00:01:22,201 - mfa - INFO - Found 1 speaker across 1 file, average number of utterances per speaker: 1.0
+2026-03-24 00:01:22,203 - mfa - DEBUG - Loaded corpus in 2.106 seconds
+2026-03-24 00:01:22,206 - mfa - INFO - Initializing multiprocessing jobs...
+2026-03-24 00:01:22,229 - mfa - DEBUG - Initialized jobs in 0.025 seconds
+2026-03-24 00:01:22,255 - mfa - INFO - Normalizing text...
+2026-03-24 00:01:23,697 - mfa - DEBUG - Wrote lexicon information in 0.231 seconds
+2026-03-24 00:01:23,701 - mfa - INFO - Generating MFCCs...
+2026-03-24 00:01:27,207 - mfa - DEBUG - Generating MFCCs took 3.504 seconds
+2026-03-24 00:01:27,234 - mfa - INFO - Calculating CMVN...
+2026-03-24 00:01:27,291 - mfa - INFO - Generating final features...
+2026-03-24 00:01:28,387 - mfa - DEBUG - Generating final features took 1.094 seconds
+2026-03-24 00:01:28,401 - mfa - INFO - Creating corpus split...
+2026-03-24 00:01:29,443 - mfa - DEBUG - Generated features in 5.746 seconds
+2026-03-24 00:01:29,443 - mfa - DEBUG - Setting up corpus took 9.657 seconds
+2026-03-24 00:01:29,443 - mfa - WARNING - There were 149 pronunciations in the dictionary that were ignored for containing one of 6 phones not present in the trained acoustic model.  Please run `mfa validate` to get more details.
+2026-03-24 00:01:29,448 - mfa - DEBUG - 
+2026-03-24 00:01:29,448 - mfa - DEBUG - ====ACOUSTIC MODEL INFO====
+2026-03-24 00:01:29,449 - mfa - DEBUG - Acoustic model root directory: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c5_w0\extracted_models\acoustic
+2026-03-24 00:01:29,449 - mfa - DEBUG - Acoustic model directory: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c5_w0\extracted_models\acoustic\vietnamese_cv_acoustic
+2026-03-24 00:01:29,449 - mfa - DEBUG - Acoustic model meta path: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c5_w0\extracted_models\acoustic\vietnamese_cv_acoustic\meta.yaml
+2026-03-24 00:01:29,449 - mfa - DEBUG - Acoustic model meta information:
+2026-03-24 00:01:29,462 - mfa - DEBUG - architecture: gmm-hmm
+base_phone_regex: null
+features:
+  allow_downsample: true
+  allow_upsample: true
+  feature_type: mfcc
+  frame_shift: 10
+  high_frequency: 7800
+  low_frequency: 20
+  pitch: false
+  sample_frequency: 16000
+  snip_edges: true
+  use_energy: false
+  uses_cmvn: true
+  uses_deltas: false
+  uses_speaker_adaptation: false
+  uses_splices: true
+  uses_voiced: false
+language: unknown
+multilingual_ipa: false
+oov_phone: spn
+optional_silence_phone: sil
+other_noise_phone: sp
+phone_set_type: null
+phone_type: triphone
+phones: !!set
+  ":\u02E7": null
+  ":\u02E7\u02E5": null
+  ":\u02E7\u02E5\u02C0": null
+  ":\u02E7\u02E9\u02E7": null
+  ":\u02E8\u02E9": null
+  ":\u02E8\u02E9\u02C0": null
+  "a\u02D0\u02E7": null
+  "a\u02D0\u02E7\u02E5": null
+  "a\u02D0\u02E7\u02E5\u02C0": null
+  "a\u02D0\u02E7\u02E9\u02E7": null
+  "a\u02D0\u02E8\u02E9": null
+  "a\u02D0\u02E8\u02E9\u02C0": null
+  "a\u02E7": null
+  "a\u02E7\u02E5": null
+  "a\u02E7\u02E5\u02C0": null
+  "a\u02E7\u02E9\u02E7": null
+  "a\u02E8\u02E9": null
+  "a\u02E8\u02E9\u02C0": null
+  "e\u02E7": null
+  "e\u02E7\u02E5": null
+  "e\u02E7\u02E5\u02C0": null
+  "e\u02E7\u02E9\u02E7": null
+  "e\u02E8\u02E9": null
+  "e\u02E8\u02E9\u02C0": null
+  f: null
+  h: null
+  "ie\u02E7\u02E5\u02C0\u02E7": null
+  "ie\u02E7\u02E5\u02E7": null
+  "ie\u02E7\u02E7": null
+  "ie\u02E7\u02E7\u02E5": null
+  "ie\u02E7\u02E7\u02E5\u02C0": null
+  "ie\u02E7\u02E7\u02E9\u02E7": null
+  "ie\u02E7\u02E8\u02E9": null
+  "ie\u02E7\u02E8\u02E9\u02C0": null
+  "ie\u02E7\u02E9\u02E7\u02E7": null
+  "ie\u02E8\u02E9\u02C0\u02E7": null
+  "ie\u02E8\u02E9\u02E7": null
+  "i\u02E7": null
+  "i\u02E7\u02E5": null
+  "i\u02E7\u02E5\u02C0": null
+  "i\u02E7\u02E9\u02E7": null
+  "i\u02E8\u02E9": null
+  "i\u02E8\u02E9\u02C0": null
+  j: null
+  k: null
+  l: null
+  m: null
+  "n\u032A": null
+  "o\u02E7": null
+  "o\u02E7\u02E5": null
+  "o\u02E7\u02E5\u02C0": null
+  "o\u02E7\u02E9\u02E7": null
+  "o\u02E8\u02E9": null
+  "o\u02E8\u02E9\u02C0": null
+  p: null
+  s: null
+  "s\u02E7": null
+  "t\u0255": null
+  "t\u032A": null
+  "t\u032A\u02B0": null
+  "uo\u02E7\u02E5\u02E7": null
+  "uo\u02E7\u02E7": null
+  "uo\u02E7\u02E7\u02E5": null
+  "uo\u02E7\u02E7\u02E5\u02C0": null
+  "uo\u02E7\u02E7\u02E9\u02E7": null
+  "uo\u02E7\u02E8\u02E9": null
+  "uo\u02E7\u02E8\u02E9\u02C0": null
+  "uo\u02E7\u02E9\u02E7\u02E7": null
+  "uo\u02E8\u02E9\u02E7": null
+  "u\u02E7": null
+  "u\u02E7\u02E5": null
+  "u\u02E7\u02E5\u02C0": null
+  "u\u02E7\u02E9\u02E7": null
+  "u\u02E8\u02E9": null
+  "u\u02E8\u02E9\u02C0": null
+  v: null
+  w: null
+  x: null
+  z: null
+  "\u014B": null
+  "\u0253": null
+  "\u0254\u02E7": null
+  "\u0254\u02E7\u02E5": null
+  "\u0254\u02E7\u02E5\u02C0": null
+  "\u0254\u02E7\u02E9\u02E7": null
+  "\u0254\u02E8\u02E9": null
+  "\u0254\u02E8\u02E9\u02C0": null
+  "\u0257": null
+  "\u025B\u02E7": null
+  "\u025B\u02E7\u02E5": null
+  "\u025B\u02E7\u02E5\u02C0": null
+  "\u025B\u02E7\u02E9\u02E7": null
+  "\u025B\u02E8\u02E9": null
+  "\u025B\u02E8\u02E9\u02C0": null
+  "\u0263": null
+  "\u0264": null
+  "\u0264\u02E7": null
+  "\u0264\u02E7\u02E5": null
+  "\u0264\u02E7\u02E5\u02C0": null
+  "\u0264\u02E7\u02E9\u02E7": null
+  "\u0264\u02E8\u02E9": null
+  "\u0264\u02E8\u02E9\u02C0": null
+  "\u026F\u0264\u02E7\u02E5\u02C0\u02E7": null
+  "\u026F\u0264\u02E7\u02E5\u02E7": null
+  "\u026F\u0264\u02E7\u02E7": null
+  "\u026F\u0264\u02E7\u02E7\u02E5": null
+  "\u026F\u0264\u02E7\u02E7\u02E5\u02C0": null
+  "\u026F\u0264\u02E7\u02E7\u02E9\u02E7": null
+  "\u026F\u0264\u02E7\u02E8\u02E9": null
+  "\u026F\u0264\u02E7\u02E8\u02E9\u02C0": null
+  "\u026F\u0264\u02E7\u02E9\u02E7\u02E7": null
+  "\u026F\u0264\u02E8\u02E9\u02C0\u02E7": null
+  "\u026F\u0264\u02E8\u02E9\u02E7": null
+  "\u026F\u02E7": null
+  "\u026F\u02E7\u02E5": null
+  "\u026F\u02E7\u02E5\u02C0": null
+  "\u026F\u02E7\u02E9\u02E7": null
+  "\u026F\u02E8\u02E9": null
+  "\u026F\u02E8\u02E9\u02C0": null
+  "\u0272": null
+  "\u0294": null
+train_date: '2021-12-19 02:27:59.994904'
+version: 2.0.0b9
+
+2026-03-24 00:01:29,462 - mfa - DEBUG - 
+2026-03-24 00:01:29,539 - mfa - DEBUG - Setup for alignment in 9.822 seconds
+2026-03-24 00:01:29,559 - mfa - INFO - Compiling training graphs...
+2026-03-24 00:01:30,574 - mfa - DEBUG - Compiling training graphs took 1.015 seconds
+2026-03-24 00:01:30,576 - mfa - INFO - Performing first-pass alignment...
+2026-03-24 00:01:30,579 - mfa - INFO - Generating alignments...
+2026-03-24 00:01:31,719 - mfa - DEBUG - Aligned 1, errors on 0, total 1
+2026-03-24 00:01:31,719 - mfa - DEBUG - Alignment round took 1.141 seconds
+2026-03-24 00:01:31,733 - mfa - INFO - Collecting phone and word alignments from alignment lattices...
+2026-03-24 00:01:32,905 - mfa - DEBUG - Bulk insert took 0.007 seconds
+2026-03-24 00:01:32,914 - mfa - DEBUG - Dropping temp tables took 0.010 seconds
+2026-03-24 00:01:32,926 - mfa - DEBUG - Collecting alignments took 1.192 seconds
+2026-03-24 00:01:32,931 - mfa - DEBUG - Generated alignments in 3.384 seconds
+2026-03-24 00:01:32,933 - mfa - INFO - Analyzing alignment quality...
+2026-03-24 00:01:34,093 - mfa - DEBUG - Analyzed alignment quality in 1.159 seconds
+2026-03-24 00:01:34,094 - mfa - INFO - Exporting alignment TextGrids to C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172_c5_w0\aligned...
+2026-03-24 00:01:34,118 - mfa - DEBUG - Not using multiprocessing for TextGrid export
+2026-03-24 00:01:34,129 - mfa - INFO - Finished exporting TextGrids to C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_25132172_c5_w0\aligned!
+2026-03-24 00:01:34,131 - mfa - DEBUG - Exported TextGrids in a total of 0.015 seconds
+2026-03-24 00:01:34,134 - mfa - INFO - Done! Everything took 14.996 seconds

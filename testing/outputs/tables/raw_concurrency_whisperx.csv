@@ -1,0 +1,730 @@
+pipeline,audio_id,audio_duration_sec,num_words,load_time_sec,idle_ram_mb,peak_ram_mb,total_time_sec,time_per_word_sec,concurrency_level,success,notes
+whisperx,common_voice_vi_25132172,1.368000,2,35.117237,70.933594,1123.843750,35.286505,17.643252,1,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."
+whisperx,common_voice_vi_24122210,2.808000,3,34.755810,84.910156,1112.457031,34.947950,11.649317,3,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."
+whisperx,common_voice_vi_25132172,1.368000,2,34.794436,82.687500,1045.082031,34.981315,17.490658,3,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."
+whisperx,common_voice_vi_24121724,3.168000,4,35.265710,91.804688,1045.003906,35.459751,8.864938,3,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."
+whisperx,common_voice_vi_24121724,3.168000,4,40.662761,72.644531,1093.515625,40.882221,10.220555,5,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."
+whisperx,common_voice_vi_24122210,2.808000,3,40.779712,74.468750,1074.601562,40.996324,13.665441,5,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."
+whisperx,common_voice_vi_25132172,1.368000,2,41.043599,75.078125,1055.972656,41.244351,20.622175,5,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."
+whisperx,common_voice_vi_23078761,3.456000,9,41.254159,72.710938,1107.777344,41.446194,4.605133,5,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."
+whisperx,common_voice_vi_25255203,3.708000,7,41.906751,72.515625,1043.843750,42.130250,6.018607,5,True,"C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             ""full-shared"" version which ships DLLs.
+          2. The PyTorch version (2.8.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\_core\ops.py"", line 57, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\torch\_ops.py"", line 1478, in load_library
+    ctypes.CDLL(path)
+  File ""C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\ctypes\__init__.py"", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\Surface1\anaconda3\envs\whisperx-aligner\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].
+  warnings.warn(
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.1. To apply the upgrade to your files permanently, run `python -m lightning.pytorch.utilities.upgrade_checkpoint C:\Users\Surface1\Anaconda3\envs\whisperx-aligner\Lib\site-packages\whisperx\assets\pytorch_model.bin`
+Some weights of the model checkpoint at nguyenvulebinh/wav2vec2-base-vi-vlsp2020 were not used when initializing Wav2Vec2ForCTC: ['feature_transform.bn1.bias', 'feature_transform.bn1.num_batches_tracked', 'feature_transform.bn1.running_mean', 'feature_transform.bn1.running_var', 'feature_transform.bn1.weight', 'feature_transform.bn2.bias', 'feature_transform.bn2.num_batches_tracked', 'feature_transform.bn2.running_mean', 'feature_transform.bn2.running_var', 'feature_transform.bn2.weight', 'feature_transform.bn3.bias', 'feature_transform.bn3.num_batches_tracked', 'feature_transform.bn3.running_mean', 'feature_transform.bn3.running_var', 'feature_transform.bn3.weight', 'feature_transform.linear1.bias', 'feature_transform.linear1.weight', 'feature_transform.linear2.bias', 'feature_transform.linear2.weight', 'feature_transform.linear3.bias', 'feature_transform.linear3.weight']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model)."

@@ -1,0 +1,7 @@
+2026-03-24 00:01:08,613 - kalpy.graphs - 10840 - 1 - DEBUG - Tree path: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c3_w0\corpus\alignment\tree
+2026-03-24 00:01:08,614 - kalpy.graphs - 10840 - 1 - DEBUG - Model path: C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root_concurrent\c3_w0\corpus\alignment\final.mdl
+2026-03-24 00:01:08,763 - kalpy.graphs - 10840 - 1 - DEBUG - Set up took 0.1457686424255371 seconds
+2026-03-24 00:01:08,764 - kalpy.graphs - 10840 - 1 - INFO - Compiling graphs for vietnamese_cv
+2026-03-24 00:01:08,765 - kalpy.graphs - 10840 - 1 - DEBUG - DISAMBIGUATION: False
+2026-03-24 00:01:08,771 - kalpy.graphs - 10840 - 1 - INFO - Done 1 utterances, errors on 0.
+2026-03-24 00:01:08,771 - kalpy.graphs - 10840 - 1 - DEBUG - Total compilation time: 0.1541883945465088 seconds

@@ -1,0 +1,10 @@
+- command: C:\Users\Surface1\Anaconda3\envs\mfa-aligner\Scripts\mfa align C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724_c3_w2\work\corpus
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\dictionary\vietnamese_cv.dict
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa_root\pretrained_models\acoustic\vietnamese_cv.zip
+    C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\mfa\common_voice_vi_24121724_c3_w2\aligned
+    --single_speaker -j 1 --clean
+  date: 2026-03-24 00:00:58.552816
+  exception: ''
+  execution_time: 14.03108811378479
+  exit_code: 0
+  version: 3.3.9

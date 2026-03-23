@@ -1,0 +1,37 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&} Đi thăm Lúc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:00.00,00:00:00.08,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&} Đ{\r}{\c&Hc7c1c2&}i thăm Lúc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:00.08,00:00:00.72,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&} Đ{\r}{\c&Hc7c1c2&}i thăm Lúc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:00.72,00:00:00.80,Default,,0,0,0,,{\c&H3d2e31&} Đ{\r}{\c&H9ab39&}i{\r}{\c&Hc7c1c2&} thăm Lúc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:00.80,00:00:00.88,Default,,0,0,0,,{\c&H3d2e31&} Đ{\r}{\c&H3d2e31&}i{\r}{\c&Hc7c1c2&} thăm Lúc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:00.88,00:00:00.96,Default,,0,0,0,,{\c&H3d2e31&} Đi{\r}{\c&H9ab39&} th{\r}{\c&Hc7c1c2&}ăm Lúc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:00.96,00:00:01.04,Default,,0,0,0,,{\c&H3d2e31&} Đi th{\r}{\c&H9ab39&}ăm{\r}{\c&Hc7c1c2&} Lúc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:01.04,00:00:01.12,Default,,0,0,0,,{\c&H3d2e31&} Đi th{\r}{\c&H3d2e31&}ăm{\r}{\c&Hc7c1c2&} Lúc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:01.12,00:00:01.20,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm{\r}{\c&H9ab39&} L{\r}{\c&Hc7c1c2&}úc này là không có tiện đâu{\r}
+Dialogue: 0,00:00:01.20,00:00:01.28,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm L{\r}{\c&H9ab39&}úc{\r}{\c&Hc7c1c2&} này là không có tiện đâu{\r}
+Dialogue: 0,00:00:01.28,00:00:01.36,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm L{\r}{\c&H3d2e31&}úc{\r}{\c&Hc7c1c2&} này là không có tiện đâu{\r}
+Dialogue: 0,00:00:01.36,00:00:01.44,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc{\r}{\c&H9ab39&} này{\r}{\c&Hc7c1c2&} là không có tiện đâu{\r}
+Dialogue: 0,00:00:01.44,00:00:01.52,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc{\r}{\c&H3d2e31&} này{\r}{\c&Hc7c1c2&} là không có tiện đâu{\r}
+Dialogue: 0,00:00:01.52,00:00:01.60,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này{\r}{\c&H9ab39&} là{\r}{\c&Hc7c1c2&} không có tiện đâu{\r}
+Dialogue: 0,00:00:01.60,00:00:01.68,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này{\r}{\c&H3d2e31&} là{\r}{\c&Hc7c1c2&} không có tiện đâu{\r}
+Dialogue: 0,00:00:01.68,00:00:01.76,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là{\r}{\c&H9ab39&} không{\r}{\c&Hc7c1c2&} có tiện đâu{\r}
+Dialogue: 0,00:00:01.76,00:00:01.84,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là{\r}{\c&H3d2e31&} không{\r}{\c&Hc7c1c2&} có tiện đâu{\r}
+Dialogue: 0,00:00:01.84,00:00:01.92,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là không{\r}{\c&H9ab39&} có{\r}{\c&Hc7c1c2&} tiện đâu{\r}
+Dialogue: 0,00:00:01.92,00:00:02.00,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là không{\r}{\c&H3d2e31&} có{\r}{\c&Hc7c1c2&} tiện đâu{\r}
+Dialogue: 0,00:00:02.00,00:00:02.08,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là không có{\r}{\c&H9ab39&} t{\r}{\c&Hc7c1c2&}iện đâu{\r}
+Dialogue: 0,00:00:02.08,00:00:02.16,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là không có t{\r}{\c&H9ab39&}iện{\r}{\c&Hc7c1c2&} đâu{\r}
+Dialogue: 0,00:00:02.16,00:00:02.40,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là không có t{\r}{\c&H3d2e31&}iện{\r}{\c&Hc7c1c2&} đâu{\r}
+Dialogue: 0,00:00:02.40,00:00:02.48,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là không có tiện{\r}{\c&H9ab39&} đâu{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:02.48,00:00:05.00,Default,,0,0,0,,{\c&H3d2e31&} Đi thăm Lúc này là không có tiện đâu{\r}

@@ -1,0 +1,21 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.96,Default,,0,0,0,,{\c&Hc7c1c2&}bố em liền nói{\r}
+Dialogue: 0,00:00:00.96,00:00:01.04,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&}bố{\r}{\c&Hc7c1c2&} em liền nói{\r}
+Dialogue: 0,00:00:01.04,00:00:01.28,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&}bố{\r}{\c&Hc7c1c2&} em liền nói{\r}
+Dialogue: 0,00:00:01.28,00:00:01.36,Default,,0,0,0,,{\c&H3d2e31&}bố {\r}{\c&H9ab39&}em{\r}{\c&Hc7c1c2&} liền nói{\r}
+Dialogue: 0,00:00:01.36,00:00:01.60,Default,,0,0,0,,{\c&H3d2e31&}bố {\r}{\c&H3d2e31&}em{\r}{\c&Hc7c1c2&} liền nói{\r}
+Dialogue: 0,00:00:01.60,00:00:01.76,Default,,0,0,0,,{\c&H3d2e31&}bố em {\r}{\c&H9ab39&}liền{\r}{\c&Hc7c1c2&} nói{\r}
+Dialogue: 0,00:00:01.76,00:00:02.08,Default,,0,0,0,,{\c&H3d2e31&}bố em {\r}{\c&H3d2e31&}liền{\r}{\c&Hc7c1c2&} nói{\r}
+Dialogue: 0,00:00:02.08,00:00:02.16,Default,,0,0,0,,{\c&H3d2e31&}bố em liền {\r}{\c&H9ab39&}nói{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:02.16,00:00:05.00,Default,,0,0,0,,{\c&H3d2e31&}bố em liền nói{\r}

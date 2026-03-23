@@ -1,0 +1,40 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:00.00,00:00:01.04,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&}Chó{\r}{\c&Hc7c1c2&} ngáp phải ruồi: thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:01.04,00:00:01.20,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&}Chó{\r}{\c&Hc7c1c2&} ngáp phải ruồi: thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:01.20,00:00:01.36,Default,,0,0,0,,{\c&H3d2e31&}Chó {\r}{\c&H9ab39&}ngáp{\r}{\c&Hc7c1c2&} phải ruồi: thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:01.36,00:00:01.68,Default,,0,0,0,,{\c&H3d2e31&}Chó {\r}{\c&H3d2e31&}ngáp{\r}{\c&Hc7c1c2&} phải ruồi: thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:01.68,00:00:01.76,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp {\r}{\c&H9ab39&}phải{\r}{\c&Hc7c1c2&} ruồi: thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:01.76,00:00:01.92,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp {\r}{\c&H3d2e31&}phải{\r}{\c&Hc7c1c2&} ruồi: thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:01.92,00:00:03.04,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải {\r}{\c&H9ab39&}ruồi:{\r}{\c&Hc7c1c2&} thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:03.04,00:00:03.12,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải {\r}{\c&H3d2e31&}ruồi:{\r}{\c&Hc7c1c2&} thành công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:03.12,00:00:03.20,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: {\r}{\c&H9ab39&}thành{\r}{\c&Hc7c1c2&} công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:03.20,00:00:03.44,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: {\r}{\c&H3d2e31&}thành{\r}{\c&Hc7c1c2&} công nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:03.44,00:00:03.52,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành {\r}{\c&H9ab39&}công{\r}{\c&Hc7c1c2&} nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:03.52,00:00:03.68,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành {\r}{\c&H3d2e31&}công{\r}{\c&Hc7c1c2&} nhờ may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:03.68,00:00:03.84,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công {\r}{\c&H9ab39&}nhờ{\r}{\c&Hc7c1c2&} may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:03.84,00:00:04.00,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công {\r}{\c&H3d2e31&}nhờ{\r}{\c&Hc7c1c2&} may mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:04.00,00:00:04.16,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ {\r}{\c&H9ab39&}may{\r}{\c&Hc7c1c2&} mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:04.16,00:00:04.32,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ {\r}{\c&H3d2e31&}may{\r}{\c&Hc7c1c2&} mắn, chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:04.32,00:00:05.28,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may {\r}{\c&H9ab39&}mắn,{\r}{\c&Hc7c1c2&} chớ không vì tài giỏi{\r}
+Dialogue: 0,00:00:05.28,00:00:05.44,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, {\r}{\c&H9ab39&}chớ{\r}{\c&Hc7c1c2&} không vì tài giỏi{\r}
+Dialogue: 0,00:00:05.44,00:00:05.68,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, {\r}{\c&H3d2e31&}chớ{\r}{\c&Hc7c1c2&} không vì tài giỏi{\r}
+Dialogue: 0,00:00:05.68,00:00:05.76,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ {\r}{\c&H9ab39&}không{\r}{\c&Hc7c1c2&} vì tài giỏi{\r}
+Dialogue: 0,00:00:05.76,00:00:06.00,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ {\r}{\c&H3d2e31&}không{\r}{\c&Hc7c1c2&} vì tài giỏi{\r}
+Dialogue: 0,00:00:06.00,00:00:06.08,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ không {\r}{\c&H9ab39&}vì{\r}{\c&Hc7c1c2&} tài giỏi{\r}
+Dialogue: 0,00:00:06.08,00:00:06.32,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ không {\r}{\c&H3d2e31&}vì{\r}{\c&Hc7c1c2&} tài giỏi{\r}
+Dialogue: 0,00:00:06.32,00:00:06.48,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ không vì {\r}{\c&H9ab39&}tài{\r}{\c&Hc7c1c2&} giỏi{\r}
+Dialogue: 0,00:00:06.48,00:00:06.64,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ không vì {\r}{\c&H3d2e31&}tài{\r}{\c&Hc7c1c2&} giỏi{\r}
+Dialogue: 0,00:00:06.64,00:00:06.80,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ không vì tài {\r}{\c&H9ab39&}giỏi{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:06.80,00:00:10.00,Default,,0,0,0,,{\c&H3d2e31&}Chó ngáp phải ruồi: thành công nhờ may mắn, chớ không vì tài giỏi{\r}

@@ -1,0 +1,144 @@
+architecture: gmm-hmm
+base_phone_regex: null
+features:
+  allow_downsample: true
+  allow_upsample: true
+  frame_shift: 10
+  high_frequency: 7800
+  low_frequency: 20
+  pitch: false
+  sample_frequency: 16000
+  snip_edges: true
+  type: mfcc
+  use_energy: false
+  uses_cmvn: true
+  uses_deltas: true
+  uses_speaker_adaptation: false
+  uses_splices: false
+  uses_voiced: false
+multilingual_ipa: false
+phone_set_type: null
+phones:
+- ":\u02E7"
+- ":\u02E7\u02E5"
+- ":\u02E7\u02E5\u02C0"
+- ":\u02E7\u02E9\u02E7"
+- ":\u02E8\u02E9"
+- ":\u02E8\u02E9\u02C0"
+- "a\u02D0\u02E7"
+- "a\u02D0\u02E7\u02E5"
+- "a\u02D0\u02E7\u02E5\u02C0"
+- "a\u02D0\u02E7\u02E9\u02E7"
+- "a\u02D0\u02E8\u02E9"
+- "a\u02D0\u02E8\u02E9\u02C0"
+- "a\u02E7"
+- "a\u02E7\u02E5"
+- "a\u02E7\u02E5\u02C0"
+- "a\u02E7\u02E9\u02E7"
+- "a\u02E8\u02E9"
+- "a\u02E8\u02E9\u02C0"
+- "e\u02E7"
+- "e\u02E7\u02E5"
+- "e\u02E7\u02E5\u02C0"
+- "e\u02E7\u02E9\u02E7"
+- "e\u02E8\u02E9"
+- "e\u02E8\u02E9\u02C0"
+- f
+- h
+- "ie\u02E7\u02E5\u02C0\u02E7"
+- "ie\u02E7\u02E5\u02E7"
+- "ie\u02E7\u02E7"
+- "ie\u02E7\u02E7\u02E5"
+- "ie\u02E7\u02E7\u02E5\u02C0"
+- "ie\u02E7\u02E7\u02E9\u02E7"
+- "ie\u02E7\u02E8\u02E9"
+- "ie\u02E7\u02E8\u02E9\u02C0"
+- "ie\u02E7\u02E9\u02E7\u02E7"
+- "ie\u02E8\u02E9\u02C0\u02E7"
+- "ie\u02E8\u02E9\u02E7"
+- "i\u02E7"
+- "i\u02E7\u02E5"
+- "i\u02E7\u02E5\u02C0"
+- "i\u02E7\u02E9\u02E7"
+- "i\u02E8\u02E9"
+- "i\u02E8\u02E9\u02C0"
+- j
+- k
+- l
+- m
+- "n\u032A"
+- "o\u02E7"
+- "o\u02E7\u02E5"
+- "o\u02E7\u02E5\u02C0"
+- "o\u02E7\u02E9\u02E7"
+- "o\u02E8\u02E9"
+- "o\u02E8\u02E9\u02C0"
+- p
+- s
+- "s\u02E7"
+- "t\u0255"
+- "t\u032A"
+- "t\u032A\u02B0"
+- "uo\u02E7\u02E5\u02E7"
+- "uo\u02E7\u02E7"
+- "uo\u02E7\u02E7\u02E5"
+- "uo\u02E7\u02E7\u02E5\u02C0"
+- "uo\u02E7\u02E7\u02E9\u02E7"
+- "uo\u02E7\u02E8\u02E9"
+- "uo\u02E7\u02E8\u02E9\u02C0"
+- "uo\u02E7\u02E9\u02E7\u02E7"
+- "uo\u02E8\u02E9\u02E7"
+- "u\u02E7"
+- "u\u02E7\u02E5"
+- "u\u02E7\u02E5\u02C0"
+- "u\u02E7\u02E9\u02E7"
+- "u\u02E8\u02E9"
+- "u\u02E8\u02E9\u02C0"
+- v
+- w
+- x
+- z
+- "\u014B"
+- "\u0253"
+- "\u0254\u02E7"
+- "\u0254\u02E7\u02E5"
+- "\u0254\u02E7\u02E5\u02C0"
+- "\u0254\u02E7\u02E9\u02E7"
+- "\u0254\u02E8\u02E9"
+- "\u0254\u02E8\u02E9\u02C0"
+- "\u0257"
+- "\u025B\u02E7"
+- "\u025B\u02E7\u02E5"
+- "\u025B\u02E7\u02E5\u02C0"
+- "\u025B\u02E7\u02E9\u02E7"
+- "\u025B\u02E8\u02E9"
+- "\u025B\u02E8\u02E9\u02C0"
+- "\u0263"
+- "\u0264"
+- "\u0264\u02E7"
+- "\u0264\u02E7\u02E5"
+- "\u0264\u02E7\u02E5\u02C0"
+- "\u0264\u02E7\u02E9\u02E7"
+- "\u0264\u02E8\u02E9"
+- "\u0264\u02E8\u02E9\u02C0"
+- "\u026F\u0264\u02E7\u02E5\u02C0\u02E7"
+- "\u026F\u0264\u02E7\u02E5\u02E7"
+- "\u026F\u0264\u02E7\u02E7"
+- "\u026F\u0264\u02E7\u02E7\u02E5"
+- "\u026F\u0264\u02E7\u02E7\u02E5\u02C0"
+- "\u026F\u0264\u02E7\u02E7\u02E9\u02E7"
+- "\u026F\u0264\u02E7\u02E8\u02E9"
+- "\u026F\u0264\u02E7\u02E8\u02E9\u02C0"
+- "\u026F\u0264\u02E7\u02E9\u02E7\u02E7"
+- "\u026F\u0264\u02E8\u02E9\u02C0\u02E7"
+- "\u026F\u0264\u02E8\u02E9\u02E7"
+- "\u026F\u02E7"
+- "\u026F\u02E7\u02E5"
+- "\u026F\u02E7\u02E5\u02C0"
+- "\u026F\u02E7\u02E9\u02E7"
+- "\u026F\u02E8\u02E9"
+- "\u026F\u02E8\u02E9\u02C0"
+- "\u0272"
+- "\u0294"
+train_date: '2021-12-19 02:27:59.994904'
+version: 2.0.0b9

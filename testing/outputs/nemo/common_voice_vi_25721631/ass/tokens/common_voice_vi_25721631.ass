@@ -1,0 +1,38 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&} Anh lái xe nghĩ hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:00.00,00:00:00.08,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&} Anh{\r}{\c&Hc7c1c2&} lái xe nghĩ hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:00.08,00:00:01.12,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&} Anh{\r}{\c&Hc7c1c2&} lái xe nghĩ hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:01.12,00:00:01.20,Default,,0,0,0,,{\c&H3d2e31&} Anh{\r}{\c&H9ab39&} l{\r}{\c&Hc7c1c2&}ái xe nghĩ hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:01.20,00:00:01.28,Default,,0,0,0,,{\c&H3d2e31&} Anh l{\r}{\c&H9ab39&}ái{\r}{\c&Hc7c1c2&} xe nghĩ hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:01.28,00:00:01.44,Default,,0,0,0,,{\c&H3d2e31&} Anh l{\r}{\c&H3d2e31&}ái{\r}{\c&Hc7c1c2&} xe nghĩ hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:01.44,00:00:01.60,Default,,0,0,0,,{\c&H3d2e31&} Anh lái{\r}{\c&H9ab39&} xe{\r}{\c&Hc7c1c2&} nghĩ hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:01.60,00:00:02.08,Default,,0,0,0,,{\c&H3d2e31&} Anh lái{\r}{\c&H3d2e31&} xe{\r}{\c&Hc7c1c2&} nghĩ hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.08,00:00:02.16,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe{\r}{\c&H9ab39&} nghĩ{\r}{\c&Hc7c1c2&} hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.16,00:00:02.32,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe{\r}{\c&H3d2e31&} nghĩ{\r}{\c&Hc7c1c2&} hà ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.32,00:00:02.40,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ{\r}{\c&H9ab39&} h{\r}{\c&Hc7c1c2&}à ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.40,00:00:02.48,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ h{\r}{\c&H9ab39&}à{\r}{\c&Hc7c1c2&} ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.48,00:00:02.56,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ h{\r}{\c&H3d2e31&}à{\r}{\c&Hc7c1c2&} ni Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.56,00:00:02.64,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà{\r}{\c&H9ab39&} n{\r}{\c&Hc7c1c2&}i Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.64,00:00:02.72,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà n{\r}{\c&H9ab39&}i{\r}{\c&Hc7c1c2&} Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.72,00:00:02.80,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà n{\r}{\c&H3d2e31&}i{\r}{\c&Hc7c1c2&} Lo cho người yêu{\r}
+Dialogue: 0,00:00:02.80,00:00:02.88,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni{\r}{\c&H9ab39&} L{\r}{\c&Hc7c1c2&}o cho người yêu{\r}
+Dialogue: 0,00:00:02.88,00:00:02.96,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni L{\r}{\c&H9ab39&}o{\r}{\c&Hc7c1c2&} cho người yêu{\r}
+Dialogue: 0,00:00:02.96,00:00:03.12,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni L{\r}{\c&H3d2e31&}o{\r}{\c&Hc7c1c2&} cho người yêu{\r}
+Dialogue: 0,00:00:03.12,00:00:03.20,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni Lo{\r}{\c&H9ab39&} cho{\r}{\c&Hc7c1c2&} người yêu{\r}
+Dialogue: 0,00:00:03.20,00:00:03.36,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni Lo{\r}{\c&H3d2e31&} cho{\r}{\c&Hc7c1c2&} người yêu{\r}
+Dialogue: 0,00:00:03.36,00:00:03.44,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni Lo cho{\r}{\c&H9ab39&} người{\r}{\c&Hc7c1c2&} yêu{\r}
+Dialogue: 0,00:00:03.44,00:00:03.60,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni Lo cho{\r}{\c&H3d2e31&} người{\r}{\c&Hc7c1c2&} yêu{\r}
+Dialogue: 0,00:00:03.60,00:00:03.68,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni Lo cho người{\r}{\c&H9ab39&} yêu{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:03.68,00:00:07.00,Default,,0,0,0,,{\c&H3d2e31&} Anh lái xe nghĩ hà ni Lo cho người yêu{\r}

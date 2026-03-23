@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&}Người ta phụ, hoặc thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:00.00,00:00:00.08,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&}Người{\r}{\c&Hc7c1c2&} ta phụ, hoặc thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:00.08,00:00:00.96,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&}Người{\r}{\c&Hc7c1c2&} ta phụ, hoặc thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:00.96,00:00:01.04,Default,,0,0,0,,{\c&H3d2e31&}Người {\r}{\c&H9ab39&}ta{\r}{\c&Hc7c1c2&} phụ, hoặc thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:01.04,00:00:01.20,Default,,0,0,0,,{\c&H3d2e31&}Người {\r}{\c&H3d2e31&}ta{\r}{\c&Hc7c1c2&} phụ, hoặc thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:01.20,00:00:01.36,Default,,0,0,0,,{\c&H3d2e31&}Người ta {\r}{\c&H9ab39&}phụ,{\r}{\c&Hc7c1c2&} hoặc thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:01.36,00:00:01.92,Default,,0,0,0,,{\c&H3d2e31&}Người ta {\r}{\c&H3d2e31&}phụ,{\r}{\c&Hc7c1c2&} hoặc thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:01.92,00:00:02.00,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, {\r}{\c&H9ab39&}hoặc{\r}{\c&Hc7c1c2&} thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:02.00,00:00:02.16,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, {\r}{\c&H3d2e31&}hoặc{\r}{\c&Hc7c1c2&} thờ ơ, chẳng biết{\r}
+Dialogue: 0,00:00:02.16,00:00:02.32,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, hoặc {\r}{\c&H9ab39&}thờ{\r}{\c&Hc7c1c2&} ơ, chẳng biết{\r}
+Dialogue: 0,00:00:02.32,00:00:02.48,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, hoặc {\r}{\c&H3d2e31&}thờ{\r}{\c&Hc7c1c2&} ơ, chẳng biết{\r}
+Dialogue: 0,00:00:02.48,00:00:02.88,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, hoặc thờ {\r}{\c&H9ab39&}ơ,{\r}{\c&Hc7c1c2&} chẳng biết{\r}
+Dialogue: 0,00:00:02.88,00:00:03.04,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, hoặc thờ {\r}{\c&H3d2e31&}ơ,{\r}{\c&Hc7c1c2&} chẳng biết{\r}
+Dialogue: 0,00:00:03.04,00:00:03.12,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, hoặc thờ ơ, {\r}{\c&H9ab39&}chẳng{\r}{\c&Hc7c1c2&} biết{\r}
+Dialogue: 0,00:00:03.12,00:00:03.44,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, hoặc thờ ơ, {\r}{\c&H3d2e31&}chẳng{\r}{\c&Hc7c1c2&} biết{\r}
+Dialogue: 0,00:00:03.44,00:00:03.52,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, hoặc thờ ơ, chẳng {\r}{\c&H9ab39&}biết{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:03.52,00:00:06.00,Default,,0,0,0,,{\c&H3d2e31&}Người ta phụ, hoặc thờ ơ, chẳng biết{\r}

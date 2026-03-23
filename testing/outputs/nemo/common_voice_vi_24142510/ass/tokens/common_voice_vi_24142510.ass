@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&} Anh đưa tay nắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:00.00,00:00:00.08,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&} Anh{\r}{\c&Hc7c1c2&} đưa tay nắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:00.08,00:00:01.28,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&} Anh{\r}{\c&Hc7c1c2&} đưa tay nắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:01.28,00:00:01.36,Default,,0,0,0,,{\c&H3d2e31&} Anh{\r}{\c&H9ab39&} đưa{\r}{\c&Hc7c1c2&} tay nắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:01.36,00:00:01.68,Default,,0,0,0,,{\c&H3d2e31&} Anh{\r}{\c&H3d2e31&} đưa{\r}{\c&Hc7c1c2&} tay nắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:01.68,00:00:01.84,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa{\r}{\c&H9ab39&} tay{\r}{\c&Hc7c1c2&} nắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:01.84,00:00:02.48,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa{\r}{\c&H3d2e31&} tay{\r}{\c&Hc7c1c2&} nắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:02.48,00:00:02.56,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay{\r}{\c&H9ab39&} n{\r}{\c&Hc7c1c2&}ắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:02.56,00:00:02.64,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay n{\r}{\c&H9ab39&}ắm{\r}{\c&Hc7c1c2&} lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:02.64,00:00:02.88,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay n{\r}{\c&H3d2e31&}ắm{\r}{\c&Hc7c1c2&} lấy chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:02.88,00:00:02.96,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm{\r}{\c&H9ab39&} lấy{\r}{\c&Hc7c1c2&} chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:02.96,00:00:03.12,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm{\r}{\c&H3d2e31&} lấy{\r}{\c&Hc7c1c2&} chút hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:03.12,00:00:03.20,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy{\r}{\c&H9ab39&} chút{\r}{\c&Hc7c1c2&} hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:03.20,00:00:03.60,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy{\r}{\c&H3d2e31&} chút{\r}{\c&Hc7c1c2&} hơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:03.60,00:00:03.68,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút{\r}{\c&H9ab39&} h{\r}{\c&Hc7c1c2&}ơi sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:03.68,00:00:03.76,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút h{\r}{\c&H9ab39&}ơi{\r}{\c&Hc7c1c2&} sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:03.76,00:00:03.92,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút h{\r}{\c&H3d2e31&}ơi{\r}{\c&Hc7c1c2&} sương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:03.92,00:00:04.00,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi{\r}{\c&H9ab39&} s{\r}{\c&Hc7c1c2&}ương còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:04.00,00:00:04.08,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi s{\r}{\c&H9ab39&}ương{\r}{\c&Hc7c1c2&} còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:04.08,00:00:04.48,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi s{\r}{\c&H3d2e31&}ương{\r}{\c&Hc7c1c2&} còn vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:04.48,00:00:04.56,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương{\r}{\c&H9ab39&} còn{\r}{\c&Hc7c1c2&} vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:04.56,00:00:04.80,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương{\r}{\c&H3d2e31&} còn{\r}{\c&Hc7c1c2&} vương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:04.80,00:00:04.88,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn{\r}{\c&H9ab39&} v{\r}{\c&Hc7c1c2&}ương lại nhưng không kịp{\r}
+Dialogue: 0,00:00:04.88,00:00:04.96,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn v{\r}{\c&H9ab39&}ương{\r}{\c&Hc7c1c2&} lại nhưng không kịp{\r}
+Dialogue: 0,00:00:04.96,00:00:05.36,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn v{\r}{\c&H3d2e31&}ương{\r}{\c&Hc7c1c2&} lại nhưng không kịp{\r}
+Dialogue: 0,00:00:05.36,00:00:05.44,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương{\r}{\c&H9ab39&} lại{\r}{\c&Hc7c1c2&} nhưng không kịp{\r}
+Dialogue: 0,00:00:05.44,00:00:06.16,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương{\r}{\c&H3d2e31&} lại{\r}{\c&Hc7c1c2&} nhưng không kịp{\r}
+Dialogue: 0,00:00:06.16,00:00:06.24,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương lại{\r}{\c&H9ab39&} nhưng{\r}{\c&Hc7c1c2&} không kịp{\r}
+Dialogue: 0,00:00:06.24,00:00:06.48,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương lại{\r}{\c&H3d2e31&} nhưng{\r}{\c&Hc7c1c2&} không kịp{\r}
+Dialogue: 0,00:00:06.48,00:00:06.56,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương lại nhưng{\r}{\c&H9ab39&} không{\r}{\c&Hc7c1c2&} kịp{\r}
+Dialogue: 0,00:00:06.56,00:00:06.72,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương lại nhưng{\r}{\c&H3d2e31&} không{\r}{\c&Hc7c1c2&} kịp{\r}
+Dialogue: 0,00:00:06.72,00:00:06.80,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương lại nhưng không{\r}{\c&H9ab39&} k{\r}{\c&Hc7c1c2&}ịp{\r}
+Dialogue: 0,00:00:06.80,00:00:06.88,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương lại nhưng không k{\r}{\c&H9ab39&}ị{\r}{\c&Hc7c1c2&}p{\r}
+Dialogue: 0,00:00:06.88,00:00:06.96,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương lại nhưng không kị{\r}{\c&H9ab39&}p{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:06.96,00:00:10.00,Default,,0,0,0,,{\c&H3d2e31&} Anh đưa tay nắm lấy chút hơi sương còn vương lại nhưng không kịp{\r}

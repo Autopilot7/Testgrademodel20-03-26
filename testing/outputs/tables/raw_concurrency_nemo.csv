@@ -1,0 +1,318 @@
+pipeline,audio_id,audio_duration_sec,num_words,load_time_sec,idle_ram_mb,peak_ram_mb,total_time_sec,time_per_word_sec,concurrency_level,success,notes
+nemo,common_voice_vi_25132172,1.368000,2,33.800272,89.203125,5279.636719,33.971522,16.985761,1,True,"[NeMo W 2026-03-24 00:16:12 <frozen importlib:241] Megatron num_microbatches_calculator not found, using Apex version.
+W0324 00:16:12.694000 2488 site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+[NeMo W 2026-03-24 00:16:17 utils:186] `additional_segment_grouping_separator` is set to ['.', '?', '!', '...']. BEHAVIOR CHANGE: Starting in NeMo 2.5.0, separators are preserved in segment text after splitting. In previous versions, separators were removed. This affects the behavior of NFA.
+[NeMo W 2026-03-24 00:16:22 ctc_models:59] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath:
+    - - /datasets/vlsp2020-vinai/tar_files/vlsp2020_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/VietMed/labeled_medical_data/tar_files/VietMed_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/FOSD/tar_files/FOSD_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/LSVSC/tar_files/LSVSC_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/VSV-1100/tar_files/VSV1100_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/cv-corpus-20.0-2024-12-06/vi/tar_files/CV_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/fleurs/data/vi_vn/tar_files/fleurs_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/vais1000/tar_files/vais_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/infore2/tar_files/infore2_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/MS-SNSD/tar_files/tarred_audio_manifest.json
+    sample_rate: 16000
+    batch_size: 64
+    shuffle: true
+    num_workers: 4
+    pin_memory: true
+    max_duration: 20.0
+    min_duration: 0.1
+    is_tarred: true
+    tarred_audio_filepaths:
+    - - /datasets/vlsp2020-vinai/tar_files/audio__OP_0..59_CL_.tar
+    - - /datasets/VietMed/labeled_medical_data/tar_files/audio__OP_0..66_CL_.tar
+    - - /datasets/FOSD/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/LSVSC/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/VSV-1100/tar_files/audio__OP_0..99_CL_.tar
+    - - /datasets/cv-corpus-20.0-2024-12-06/vi/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/fleurs/data/vi_vn/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/vais1000/tar_files/audio__OP_0..0_CL_.tar
+    - - /datasets/infore2/tar_files/audio__OP_0..99_CL_.tar
+    - - /datasets/MS-SNSD/tar_files/audio__OP_0..0_CL_.tar
+    shuffle_n: 2048
+    bucketing_strategy: fully_randomized
+    bucketing_batch_size: null
+    use_bucketing: false
+    use_lhotse: true
+    batch_duration: 200
+    quadratic_duration: 15
+    text_field: text_pnc_v3
+    drop_last: true
+    
+[NeMo W 2026-03-24 00:16:22 ctc_models:59] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath: /datasets/VietMed/concat_val_manifest_multitexts_v2_qwen_norm.json
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 4
+    pin_memory: true
+    use_lhotse: true
+    use_bucketing: false
+    max_cuts: 8
+    text_field: text_pnc_v3
+    drop_last: true
+    
+[NeMo W 2026-03-24 00:16:22 ctc_models:59] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    pin_memory: true
+    
+[NeMo W 2026-03-24 00:16:29 dataloader:335] The following configuration keys are ignored by Lhotse dataloader: use_start_end_token
+[NeMo W 2026-03-24 00:16:29 dataloader:341] You are using a non-tarred dataset and requested tokenization during data sampling (pretokenize=True). This will cause the tokenization to happen in the main (GPU) process,possibly impacting the training speed if your tokenizer is very large.If the impact is noticable, set pretokenize=False in dataloader config.(note: that will disable token-per-second filtering and 2D bucketing features)
+
+Transcribing: 0it [00:00, ?it/s]
+Transcribing: 1it [00:00,  1.46it/s]
+Transcribing: 1it [00:00,  1.46it/s]"
+nemo,common_voice_vi_24121724,3.168000,4,123.260659,103.492188,3163.050781,123.498765,30.874691,3,True,"[NeMo W 2026-03-24 00:16:46 <frozen importlib:241] Megatron num_microbatches_calculator not found, using Apex version.
+W0324 00:16:46.614000 3048 site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+[NeMo W 2026-03-24 00:16:51 utils:186] `additional_segment_grouping_separator` is set to ['.', '?', '!', '...']. BEHAVIOR CHANGE: Starting in NeMo 2.5.0, separators are preserved in segment text after splitting. In previous versions, separators were removed. This affects the behavior of NFA.
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath:
+    - - /datasets/vlsp2020-vinai/tar_files/vlsp2020_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/VietMed/labeled_medical_data/tar_files/VietMed_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/FOSD/tar_files/FOSD_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/LSVSC/tar_files/LSVSC_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/VSV-1100/tar_files/VSV1100_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/cv-corpus-20.0-2024-12-06/vi/tar_files/CV_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/fleurs/data/vi_vn/tar_files/fleurs_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/vais1000/tar_files/vais_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/infore2/tar_files/infore2_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/MS-SNSD/tar_files/tarred_audio_manifest.json
+    sample_rate: 16000
+    batch_size: 64
+    shuffle: true
+    num_workers: 4
+    pin_memory: true
+    max_duration: 20.0
+    min_duration: 0.1
+    is_tarred: true
+    tarred_audio_filepaths:
+    - - /datasets/vlsp2020-vinai/tar_files/audio__OP_0..59_CL_.tar
+    - - /datasets/VietMed/labeled_medical_data/tar_files/audio__OP_0..66_CL_.tar
+    - - /datasets/FOSD/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/LSVSC/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/VSV-1100/tar_files/audio__OP_0..99_CL_.tar
+    - - /datasets/cv-corpus-20.0-2024-12-06/vi/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/fleurs/data/vi_vn/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/vais1000/tar_files/audio__OP_0..0_CL_.tar
+    - - /datasets/infore2/tar_files/audio__OP_0..99_CL_.tar
+    - - /datasets/MS-SNSD/tar_files/audio__OP_0..0_CL_.tar
+    shuffle_n: 2048
+    bucketing_strategy: fully_randomized
+    bucketing_batch_size: null
+    use_bucketing: false
+    use_lhotse: true
+    batch_duration: 200
+    quadratic_duration: 15
+    text_field: text_pnc_v3
+    drop_last: true
+    
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath: /datasets/VietMed/concat_val_manifest_multitexts_v2_qwen_norm.json
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 4
+    pin_memory: true
+    use_lhotse: true
+    use_bucketing: false
+    max_cuts: 8
+    text_field: text_pnc_v3
+    drop_last: true
+    
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    pin_memory: true
+    
+[NeMo W 2026-03-24 00:18:23 dataloader:335] The following configuration keys are ignored by Lhotse dataloader: use_start_end_token
+[NeMo W 2026-03-24 00:18:23 dataloader:341] You are using a non-tarred dataset and requested tokenization during data sampling (pretokenize=True). This will cause the tokenization to happen in the main (GPU) process,possibly impacting the training speed if your tokenizer is very large.If the impact is noticable, set pretokenize=False in dataloader config.(note: that will disable token-per-second filtering and 2D bucketing features)
+
+Transcribing: 0it [00:00, ?it/s]
+Transcribing: 1it [00:02,  2.69s/it]
+Transcribing: 1it [00:02,  2.69s/it]"
+nemo,common_voice_vi_25132172,1.368000,2,123.421529,82.359375,3167.582031,123.636781,61.818390,3,True,"[NeMo W 2026-03-24 00:16:46 <frozen importlib:241] Megatron num_microbatches_calculator not found, using Apex version.
+W0324 00:16:46.614000 1552 site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+[NeMo W 2026-03-24 00:16:51 utils:186] `additional_segment_grouping_separator` is set to ['.', '?', '!', '...']. BEHAVIOR CHANGE: Starting in NeMo 2.5.0, separators are preserved in segment text after splitting. In previous versions, separators were removed. This affects the behavior of NFA.
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath:
+    - - /datasets/vlsp2020-vinai/tar_files/vlsp2020_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/VietMed/labeled_medical_data/tar_files/VietMed_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/FOSD/tar_files/FOSD_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/LSVSC/tar_files/LSVSC_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/VSV-1100/tar_files/VSV1100_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/cv-corpus-20.0-2024-12-06/vi/tar_files/CV_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/fleurs/data/vi_vn/tar_files/fleurs_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/vais1000/tar_files/vais_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/infore2/tar_files/infore2_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/MS-SNSD/tar_files/tarred_audio_manifest.json
+    sample_rate: 16000
+    batch_size: 64
+    shuffle: true
+    num_workers: 4
+    pin_memory: true
+    max_duration: 20.0
+    min_duration: 0.1
+    is_tarred: true
+    tarred_audio_filepaths:
+    - - /datasets/vlsp2020-vinai/tar_files/audio__OP_0..59_CL_.tar
+    - - /datasets/VietMed/labeled_medical_data/tar_files/audio__OP_0..66_CL_.tar
+    - - /datasets/FOSD/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/LSVSC/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/VSV-1100/tar_files/audio__OP_0..99_CL_.tar
+    - - /datasets/cv-corpus-20.0-2024-12-06/vi/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/fleurs/data/vi_vn/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/vais1000/tar_files/audio__OP_0..0_CL_.tar
+    - - /datasets/infore2/tar_files/audio__OP_0..99_CL_.tar
+    - - /datasets/MS-SNSD/tar_files/audio__OP_0..0_CL_.tar
+    shuffle_n: 2048
+    bucketing_strategy: fully_randomized
+    bucketing_batch_size: null
+    use_bucketing: false
+    use_lhotse: true
+    batch_duration: 200
+    quadratic_duration: 15
+    text_field: text_pnc_v3
+    drop_last: true
+    
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath: /datasets/VietMed/concat_val_manifest_multitexts_v2_qwen_norm.json
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 4
+    pin_memory: true
+    use_lhotse: true
+    use_bucketing: false
+    max_cuts: 8
+    text_field: text_pnc_v3
+    drop_last: true
+    
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    pin_memory: true
+    
+[NeMo W 2026-03-24 00:18:25 dataloader:335] The following configuration keys are ignored by Lhotse dataloader: use_start_end_token
+[NeMo W 2026-03-24 00:18:25 dataloader:341] You are using a non-tarred dataset and requested tokenization during data sampling (pretokenize=True). This will cause the tokenization to happen in the main (GPU) process,possibly impacting the training speed if your tokenizer is very large.If the impact is noticable, set pretokenize=False in dataloader config.(note: that will disable token-per-second filtering and 2D bucketing features)
+
+Transcribing: 0it [00:00, ?it/s]
+Transcribing: 1it [00:02,  2.19s/it]
+Transcribing: 1it [00:02,  2.19s/it]"
+nemo,common_voice_vi_24122210,2.808000,3,124.522408,101.468750,3146.082031,124.746415,41.582138,3,True,"[NeMo W 2026-03-24 00:16:46 <frozen importlib:241] Megatron num_microbatches_calculator not found, using Apex version.
+W0324 00:16:46.614000 4848 site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+[NeMo W 2026-03-24 00:16:51 utils:186] `additional_segment_grouping_separator` is set to ['.', '?', '!', '...']. BEHAVIOR CHANGE: Starting in NeMo 2.5.0, separators are preserved in segment text after splitting. In previous versions, separators were removed. This affects the behavior of NFA.
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath:
+    - - /datasets/vlsp2020-vinai/tar_files/vlsp2020_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/VietMed/labeled_medical_data/tar_files/VietMed_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/FOSD/tar_files/FOSD_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/LSVSC/tar_files/LSVSC_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/VSV-1100/tar_files/VSV1100_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/cv-corpus-20.0-2024-12-06/vi/tar_files/CV_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/fleurs/data/vi_vn/tar_files/fleurs_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/vais1000/tar_files/vais_tarred_audio_manifest_fixed_wav_multitexts_v2_qwen_norm.json
+    - - /datasets/infore2/tar_files/infore2_tarred_audio_manifest_multitexts_v2_qwen_norm.json
+    - - /datasets/MS-SNSD/tar_files/tarred_audio_manifest.json
+    sample_rate: 16000
+    batch_size: 64
+    shuffle: true
+    num_workers: 4
+    pin_memory: true
+    max_duration: 20.0
+    min_duration: 0.1
+    is_tarred: true
+    tarred_audio_filepaths:
+    - - /datasets/vlsp2020-vinai/tar_files/audio__OP_0..59_CL_.tar
+    - - /datasets/VietMed/labeled_medical_data/tar_files/audio__OP_0..66_CL_.tar
+    - - /datasets/FOSD/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/LSVSC/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/VSV-1100/tar_files/audio__OP_0..99_CL_.tar
+    - - /datasets/cv-corpus-20.0-2024-12-06/vi/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/fleurs/data/vi_vn/tar_files/audio__OP_0..45_CL_.tar
+    - - /datasets/vais1000/tar_files/audio__OP_0..0_CL_.tar
+    - - /datasets/infore2/tar_files/audio__OP_0..99_CL_.tar
+    - - /datasets/MS-SNSD/tar_files/audio__OP_0..0_CL_.tar
+    shuffle_n: 2048
+    bucketing_strategy: fully_randomized
+    bucketing_batch_size: null
+    use_bucketing: false
+    use_lhotse: true
+    batch_duration: 200
+    quadratic_duration: 15
+    text_field: text_pnc_v3
+    drop_last: true
+    
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath: /datasets/VietMed/concat_val_manifest_multitexts_v2_qwen_norm.json
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 4
+    pin_memory: true
+    use_lhotse: true
+    use_bucketing: false
+    max_cuts: 8
+    text_field: text_pnc_v3
+    drop_last: true
+    
+[NeMo W 2026-03-24 00:17:12 ctc_models:59] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    pin_memory: true
+    
+[NeMo W 2026-03-24 00:18:26 dataloader:335] The following configuration keys are ignored by Lhotse dataloader: use_start_end_token
+[NeMo W 2026-03-24 00:18:26 dataloader:341] You are using a non-tarred dataset and requested tokenization during data sampling (pretokenize=True). This will cause the tokenization to happen in the main (GPU) process,possibly impacting the training speed if your tokenizer is very large.If the impact is noticable, set pretokenize=False in dataloader config.(note: that will disable token-per-second filtering and 2D bucketing features)
+
+Transcribing: 0it [00:00, ?it/s]
+Transcribing: 1it [00:03,  3.24s/it]
+Transcribing: 1it [00:03,  3.25s/it]"
+nemo,common_voice_vi_25132172,1.368000,2,,,,,,5,False,OOM: concurrency=5 killed by user (estimated ~26 GB RAM needed for 5 concurrent NeMo processes)
+nemo,common_voice_vi_24122210,2.808000,3,,,,,,5,False,OOM: concurrency=5 killed by user (estimated ~26 GB RAM needed for 5 concurrent NeMo processes)
+nemo,common_voice_vi_24121724,3.168000,4,,,,,,5,False,OOM: concurrency=5 killed by user (estimated ~26 GB RAM needed for 5 concurrent NeMo processes)
+nemo,common_voice_vi_23078761,3.456000,9,,,,,,5,False,OOM: concurrency=5 killed by user (estimated ~26 GB RAM needed for 5 concurrent NeMo processes)
+nemo,common_voice_vi_25255203,3.708000,7,,,,,,5,False,OOM: concurrency=5 killed by user (estimated ~26 GB RAM needed for 5 concurrent NeMo processes)

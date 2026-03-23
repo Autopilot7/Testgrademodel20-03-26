@@ -1,0 +1,43 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&} Quân tử nhất ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:00.00,00:00:00.08,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&} Qu{\r}{\c&Hc7c1c2&}ân tử nhất ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:00.08,00:00:01.04,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&} Qu{\r}{\c&Hc7c1c2&}ân tử nhất ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:01.04,00:00:01.12,Default,,0,0,0,,{\c&H3d2e31&} Qu{\r}{\c&H9ab39&}ân{\r}{\c&Hc7c1c2&} tử nhất ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:01.12,00:00:01.44,Default,,0,0,0,,{\c&H3d2e31&} Qu{\r}{\c&H3d2e31&}ân{\r}{\c&Hc7c1c2&} tử nhất ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:01.44,00:00:01.52,Default,,0,0,0,,{\c&H3d2e31&} Quân{\r}{\c&H9ab39&} tử{\r}{\c&Hc7c1c2&} nhất ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:01.52,00:00:01.68,Default,,0,0,0,,{\c&H3d2e31&} Quân{\r}{\c&H3d2e31&} tử{\r}{\c&Hc7c1c2&} nhất ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:01.68,00:00:01.84,Default,,0,0,0,,{\c&H3d2e31&} Quân tử{\r}{\c&H9ab39&} nhất{\r}{\c&Hc7c1c2&} ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:01.84,00:00:01.92,Default,,0,0,0,,{\c&H3d2e31&} Quân tử{\r}{\c&H3d2e31&} nhất{\r}{\c&Hc7c1c2&} ngôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:01.92,00:00:02.00,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất{\r}{\c&H9ab39&} ng{\r}{\c&Hc7c1c2&}ôn kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:02.00,00:00:02.08,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ng{\r}{\c&H9ab39&}ôn{\r}{\c&Hc7c1c2&} kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:02.08,00:00:02.32,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ng{\r}{\c&H3d2e31&}ôn{\r}{\c&Hc7c1c2&} kí xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:02.32,00:00:02.40,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn{\r}{\c&H9ab39&} k{\r}{\c&Hc7c1c2&}í xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:02.40,00:00:02.48,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn k{\r}{\c&H9ab39&}í{\r}{\c&Hc7c1c2&} xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:02.48,00:00:02.56,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn k{\r}{\c&H3d2e31&}í{\r}{\c&Hc7c1c2&} xuất, tứ mã nan truy{\r}
+Dialogue: 0,00:00:02.56,00:00:02.64,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí{\r}{\c&H9ab39&} xuất{\r}{\c&Hc7c1c2&}, tứ mã nan truy{\r}
+Dialogue: 0,00:00:02.64,00:00:02.72,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất{\r}{\c&H9ab39&},{\r}{\c&Hc7c1c2&} tứ mã nan truy{\r}
+Dialogue: 0,00:00:02.72,00:00:03.44,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất{\r}{\c&H3d2e31&},{\r}{\c&Hc7c1c2&} tứ mã nan truy{\r}
+Dialogue: 0,00:00:03.44,00:00:03.52,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất,{\r}{\c&H9ab39&} t{\r}{\c&Hc7c1c2&}ứ mã nan truy{\r}
+Dialogue: 0,00:00:03.52,00:00:03.60,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, t{\r}{\c&H9ab39&}ứ{\r}{\c&Hc7c1c2&} mã nan truy{\r}
+Dialogue: 0,00:00:03.60,00:00:03.76,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, t{\r}{\c&H3d2e31&}ứ{\r}{\c&Hc7c1c2&} mã nan truy{\r}
+Dialogue: 0,00:00:03.76,00:00:03.84,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ{\r}{\c&H9ab39&} m{\r}{\c&Hc7c1c2&}ã nan truy{\r}
+Dialogue: 0,00:00:03.84,00:00:03.92,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ m{\r}{\c&H9ab39&}ã{\r}{\c&Hc7c1c2&} nan truy{\r}
+Dialogue: 0,00:00:03.92,00:00:04.16,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ m{\r}{\c&H3d2e31&}ã{\r}{\c&Hc7c1c2&} nan truy{\r}
+Dialogue: 0,00:00:04.16,00:00:04.24,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ mã{\r}{\c&H9ab39&} n{\r}{\c&Hc7c1c2&}an truy{\r}
+Dialogue: 0,00:00:04.24,00:00:04.32,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ mã n{\r}{\c&H9ab39&}an{\r}{\c&Hc7c1c2&} truy{\r}
+Dialogue: 0,00:00:04.32,00:00:04.48,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ mã n{\r}{\c&H3d2e31&}an{\r}{\c&Hc7c1c2&} truy{\r}
+Dialogue: 0,00:00:04.48,00:00:04.56,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ mã nan{\r}{\c&H9ab39&} tr{\r}{\c&Hc7c1c2&}uy{\r}
+Dialogue: 0,00:00:04.56,00:00:04.64,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ mã nan tr{\r}{\c&H9ab39&}uy{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:04.64,00:00:10.00,Default,,0,0,0,,{\c&H3d2e31&} Quân tử nhất ngôn kí xuất, tứ mã nan truy{\r}

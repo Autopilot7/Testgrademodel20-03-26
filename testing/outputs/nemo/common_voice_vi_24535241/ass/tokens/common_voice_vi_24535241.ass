@@ -1,0 +1,35 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,5,10,10,20,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,00:00:00.00,00:00:00.00,Default,,0,0,0,,{\c&Hc7c1c2&} Để Đông về ấm mãi tim côi{\r}
+Dialogue: 0,00:00:00.00,00:00:00.08,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H9ab39&} Đ{\r}{\c&Hc7c1c2&}ể Đông về ấm mãi tim côi{\r}
+Dialogue: 0,00:00:00.08,00:00:00.72,Default,,0,0,0,,{\c&H3d2e31&}{\r}{\c&H3d2e31&} Đ{\r}{\c&Hc7c1c2&}ể Đông về ấm mãi tim côi{\r}
+Dialogue: 0,00:00:00.72,00:00:00.80,Default,,0,0,0,,{\c&H3d2e31&} Đ{\r}{\c&H9ab39&}ể{\r}{\c&Hc7c1c2&} Đông về ấm mãi tim côi{\r}
+Dialogue: 0,00:00:00.80,00:00:01.04,Default,,0,0,0,,{\c&H3d2e31&} Đ{\r}{\c&H3d2e31&}ể{\r}{\c&Hc7c1c2&} Đông về ấm mãi tim côi{\r}
+Dialogue: 0,00:00:01.04,00:00:01.12,Default,,0,0,0,,{\c&H3d2e31&} Để{\r}{\c&H9ab39&} Đ{\r}{\c&Hc7c1c2&}ông về ấm mãi tim côi{\r}
+Dialogue: 0,00:00:01.12,00:00:01.20,Default,,0,0,0,,{\c&H3d2e31&} Để Đ{\r}{\c&H9ab39&}ông{\r}{\c&Hc7c1c2&} về ấm mãi tim côi{\r}
+Dialogue: 0,00:00:01.20,00:00:01.52,Default,,0,0,0,,{\c&H3d2e31&} Để Đ{\r}{\c&H3d2e31&}ông{\r}{\c&Hc7c1c2&} về ấm mãi tim côi{\r}
+Dialogue: 0,00:00:01.52,00:00:01.60,Default,,0,0,0,,{\c&H3d2e31&} Để Đông{\r}{\c&H9ab39&} về{\r}{\c&Hc7c1c2&} ấm mãi tim côi{\r}
+Dialogue: 0,00:00:01.60,00:00:02.00,Default,,0,0,0,,{\c&H3d2e31&} Để Đông{\r}{\c&H3d2e31&} về{\r}{\c&Hc7c1c2&} ấm mãi tim côi{\r}
+Dialogue: 0,00:00:02.00,00:00:02.08,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về{\r}{\c&H9ab39&} {\r}{\c&Hc7c1c2&}ấm mãi tim côi{\r}
+Dialogue: 0,00:00:02.08,00:00:02.16,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về {\r}{\c&H9ab39&}ấm{\r}{\c&Hc7c1c2&} mãi tim côi{\r}
+Dialogue: 0,00:00:02.16,00:00:02.32,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về {\r}{\c&H3d2e31&}ấm{\r}{\c&Hc7c1c2&} mãi tim côi{\r}
+Dialogue: 0,00:00:02.32,00:00:02.40,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm{\r}{\c&H9ab39&} m{\r}{\c&Hc7c1c2&}ãi tim côi{\r}
+Dialogue: 0,00:00:02.40,00:00:02.48,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm m{\r}{\c&H9ab39&}ãi{\r}{\c&Hc7c1c2&} tim côi{\r}
+Dialogue: 0,00:00:02.48,00:00:02.80,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm m{\r}{\c&H3d2e31&}ãi{\r}{\c&Hc7c1c2&} tim côi{\r}
+Dialogue: 0,00:00:02.80,00:00:02.88,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm mãi{\r}{\c&H9ab39&} t{\r}{\c&Hc7c1c2&}im côi{\r}
+Dialogue: 0,00:00:02.88,00:00:02.96,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm mãi t{\r}{\c&H9ab39&}im{\r}{\c&Hc7c1c2&} côi{\r}
+Dialogue: 0,00:00:02.96,00:00:03.20,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm mãi t{\r}{\c&H3d2e31&}im{\r}{\c&Hc7c1c2&} côi{\r}
+Dialogue: 0,00:00:03.20,00:00:03.28,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm mãi tim{\r}{\c&H9ab39&} c{\r}{\c&Hc7c1c2&}ôi{\r}
+Dialogue: 0,00:00:03.28,00:00:03.36,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm mãi tim c{\r}{\c&H9ab39&}ôi{\r}{\c&Hc7c1c2&}{\r}
+Dialogue: 0,00:00:03.36,00:00:07.00,Default,,0,0,0,,{\c&H3d2e31&} Để Đông về ấm mãi tim côi{\r}
