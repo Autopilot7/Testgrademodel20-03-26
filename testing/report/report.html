@@ -248,12 +248,12 @@ img {
 - Deterministic — same input always produces the same output<br />
 - Cold-start overhead: ~18–20 s per call (model re-extracted from ZIP each time)</p>
 <p><strong>Output example (TextGrid phone tier):</strong></p>
-<div class="codehilite"><pre><span></span><code>IntervalTier &quot;phones&quot;
+<pre class="codehilite"><code>IntervalTier &quot;phones&quot;
 [0.00 – 0.18]  &quot;t&quot;
 [0.18 – 0.32]  &quot;aj&quot;
 [0.32 – 0.55]  &quot;s&quot;
 [0.55 – 0.72]  &quot;aw&quot;
-</code></pre></div>
+</code></pre>
 
 <hr />
 <h3 id="22-nemo-forced-aligner-nfa">2.2 NeMo Forced Aligner (NFA)</h3>
@@ -290,13 +290,13 @@ img {
 - Exceptional scalability: 5 concurrent users add only 19% wall-clock overhead<br />
 - Trade-off: alignment quality depends on ASR accuracy — mispronounced words are aligned as-spoken, not as-intended</p>
 <p><strong>Output example (JSON word segment):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;word&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sao&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.32</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.54</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.921</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre class="codehilite"><code class="language-json">{
+  &quot;word&quot;: &quot;sao&quot;,
+  &quot;start&quot;: 0.32,
+  &quot;end&quot;: 0.54,
+  &quot;score&quot;: 0.921
+}
+</code></pre>
 
 <hr />
 <h2 id="3-evaluation-protocol">3. Evaluation Protocol</h2>
@@ -723,111 +723,111 @@ img {
 <hr />
 <h2 id="7-code-snippets">7. Code Snippets</h2>
 <h3 id="71-mfa-pipeline-alignment-call">7.1 MFA pipeline — alignment call</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># pipelines/mfa/run_alignment.py (simplified)</span>
-<span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">mfa_executable</span><span class="p">,</span> <span class="s2">&quot;align&quot;</span><span class="p">,</span>
-    <span class="nb">str</span><span class="p">(</span><span class="n">corpus_dir</span><span class="p">),</span>           <span class="c1"># contains audio + .lab transcript</span>
-    <span class="nb">str</span><span class="p">(</span><span class="n">dictionary_path</span><span class="p">),</span>      <span class="c1"># vietnamese_cv.dict</span>
-    <span class="nb">str</span><span class="p">(</span><span class="n">acoustic_model_path</span><span class="p">),</span>  <span class="c1"># vietnamese_cv.zip</span>
-    <span class="nb">str</span><span class="p">(</span><span class="n">aligned_dir</span><span class="p">),</span>
-    <span class="s2">&quot;--single_speaker&quot;</span><span class="p">,</span> <span class="s2">&quot;-j&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;--clean&quot;</span><span class="p">,</span>
-<span class="p">]</span>
-<span class="n">returncode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="n">run_mfa_command</span><span class="p">(</span>
-    <span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">mfa_env</span>
-<span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code class="language-python"># pipelines/mfa/run_alignment.py (simplified)
+command = [
+    mfa_executable, &quot;align&quot;,
+    str(corpus_dir),           # contains audio + .lab transcript
+    str(dictionary_path),      # vietnamese_cv.dict
+    str(acoustic_model_path),  # vietnamese_cv.zip
+    str(aligned_dir),
+    &quot;--single_speaker&quot;, &quot;-j&quot;, &quot;1&quot;, &quot;--clean&quot;,
+]
+returncode, stdout, stderr, idle_ram_mb, peak_ram_mb = run_mfa_command(
+    command, cwd=output_dir, env=mfa_env
+)
+</code></pre>
 
 <h3 id="72-nemo-fa-pipeline-alignment-call">7.2 NeMo FA pipeline — alignment call</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># pipelines/nemo/run_alignment.py (simplified)</span>
-<span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">python_executable</span><span class="p">,</span>
-    <span class="nb">str</span><span class="p">(</span><span class="n">nemo_align_script</span><span class="p">),</span>
-    <span class="sa">f</span><span class="s2">&quot;manifest_filepath=</span><span class="si">{</span><span class="n">manifest_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-    <span class="sa">f</span><span class="s2">&quot;output_dir=</span><span class="si">{</span><span class="n">output_dir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-    <span class="sa">f</span><span class="s1">&#39;pretrained_name=&quot;</span><span class="si">{</span><span class="n">pretrained_name</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">,</span>
-    <span class="s2">&quot;transcribe_device=cpu&quot;</span><span class="p">,</span>
-<span class="p">]</span>
-<span class="n">returncode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="n">run_with_ram_monitoring</span><span class="p">(</span>
-    <span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">output_dir</span>
-<span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code class="language-python"># pipelines/nemo/run_alignment.py (simplified)
+command = [
+    python_executable,
+    str(nemo_align_script),
+    f&quot;manifest_filepath={manifest_path}&quot;,
+    f&quot;output_dir={output_dir}&quot;,
+    f'pretrained_name=&quot;{pretrained_name}&quot;',
+    &quot;transcribe_device=cpu&quot;,
+]
+returncode, stdout, stderr, idle_ram_mb, peak_ram_mb = run_with_ram_monitoring(
+    command, cwd=output_dir
+)
+</code></pre>
 
 <h3 id="73-whisperx-pipeline-alignment-call">7.3 WhisperX pipeline — alignment call</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># pipelines/whisperx/run_alignment.py (simplified)</span>
-<span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">whisperx_executable</span><span class="p">,</span>
-    <span class="nb">str</span><span class="p">(</span><span class="n">audio_path</span><span class="p">),</span>
-    <span class="s2">&quot;--model&quot;</span><span class="p">,</span> <span class="s2">&quot;small&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;--language&quot;</span><span class="p">,</span> <span class="s2">&quot;vi&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;--output_dir&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">output_dir</span><span class="p">),</span>
-    <span class="s2">&quot;--output_format&quot;</span><span class="p">,</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;--device&quot;</span><span class="p">,</span> <span class="s2">&quot;cpu&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;--compute_type&quot;</span><span class="p">,</span> <span class="s2">&quot;int8&quot;</span><span class="p">,</span>
-<span class="p">]</span>
-<span class="n">returncode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="n">run_with_ram_monitoring</span><span class="p">(</span>
-    <span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">output_dir</span><span class="p">,</span>
-    <span class="n">extra_env</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;PYTHONUTF8&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;PYTHONIOENCODING&quot;</span><span class="p">:</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">},</span>
-<span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code class="language-python"># pipelines/whisperx/run_alignment.py (simplified)
+command = [
+    whisperx_executable,
+    str(audio_path),
+    &quot;--model&quot;, &quot;small&quot;,
+    &quot;--language&quot;, &quot;vi&quot;,
+    &quot;--output_dir&quot;, str(output_dir),
+    &quot;--output_format&quot;, &quot;json&quot;,
+    &quot;--device&quot;, &quot;cpu&quot;,
+    &quot;--compute_type&quot;, &quot;int8&quot;,
+]
+returncode, stdout, stderr, idle_ram_mb, peak_ram_mb = run_with_ram_monitoring(
+    command, cwd=output_dir,
+    extra_env={&quot;PYTHONUTF8&quot;: &quot;1&quot;, &quot;PYTHONIOENCODING&quot;: &quot;utf-8&quot;},
+)
+</code></pre>
 
 <h3 id="74-ram-monitoring-implementation-pipelinescommonpy">7.4 RAM monitoring implementation (<code>pipelines/common.py</code>)</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">run_with_ram_monitoring</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_env</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="n">env</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">env</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;PYTHONUTF8&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span>
-    <span class="n">env</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;PYTHONIOENCODING&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">extra_env</span><span class="p">:</span>
-        <span class="n">env</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">extra_env</span><span class="p">)</span>
+<pre class="codehilite"><code class="language-python">def run_with_ram_monitoring(command, *, cwd=None, extra_env=None):
+    env = os.environ.copy()
+    env.setdefault(&quot;PYTHONUTF8&quot;, &quot;1&quot;)
+    env.setdefault(&quot;PYTHONIOENCODING&quot;, &quot;utf-8&quot;)
+    if extra_env:
+        env.update(extra_env)
 
-    <span class="n">idle_ram_mb</span> <span class="o">=</span> <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="kc">None</span>
+    idle_ram_mb = peak_ram_mb = None
 
-    <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryFile</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w+&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_f</span><span class="p">,</span> \
-         <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryFile</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w+&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="k">as</span> <span class="n">err_f</span><span class="p">:</span>
+    with tempfile.TemporaryFile(mode=&quot;w+&quot;, ...) as out_f, \
+         tempfile.TemporaryFile(mode=&quot;w+&quot;, ...) as err_f:
 
-        <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">cwd</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">out_f</span><span class="p">,</span>
-                                <span class="n">stderr</span><span class="o">=</span><span class="n">err_f</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">)</span>
-        <span class="n">stop_event</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+        proc = subprocess.Popen(command, cwd=cwd, stdout=out_f,
+                                stderr=err_f, text=True, env=env)
+        stop_event = threading.Event()
 
-        <span class="k">def</span><span class="w"> </span><span class="nf">_monitor</span><span class="p">():</span>
-            <span class="k">nonlocal</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span>
-            <span class="n">parent</span> <span class="o">=</span> <span class="n">psutil</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">proc</span><span class="o">.</span><span class="n">pid</span><span class="p">)</span>
-            <span class="n">first_sample</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="k">while</span> <span class="ow">not</span> <span class="n">stop_event</span><span class="o">.</span><span class="n">is_set</span><span class="p">():</span>
-                <span class="n">rss_mb</span> <span class="o">=</span> <span class="n">collect_tree_rss_mb</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>   <span class="c1"># sums all child processes</span>
-                <span class="k">if</span> <span class="n">first_sample</span> <span class="ow">and</span> <span class="n">rss_mb</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-                    <span class="n">idle_ram_mb</span> <span class="o">=</span> <span class="n">collect_tree_rss_mb</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
-                    <span class="n">first_sample</span> <span class="o">=</span> <span class="kc">False</span>
-                <span class="n">peak_ram_mb</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">peak_ram_mb</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rss_mb</span><span class="p">)</span>
-                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+        def _monitor():
+            nonlocal idle_ram_mb, peak_ram_mb
+            parent = psutil.Process(proc.pid)
+            first_sample = True
+            while not stop_event.is_set():
+                rss_mb = collect_tree_rss_mb(parent)   # sums all child processes
+                if first_sample and rss_mb &gt; 0:
+                    time.sleep(0.5)
+                    idle_ram_mb = collect_tree_rss_mb(parent)
+                    first_sample = False
+                peak_ram_mb = max(peak_ram_mb or 0, rss_mb)
+                time.sleep(0.1)
 
-        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">_monitor</span><span class="p">,</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-        <span class="n">proc</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-        <span class="n">stop_event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+        threading.Thread(target=_monitor, daemon=True).start()
+        proc.wait()
+        stop_event.set()
 
-    <span class="k">return</span> <span class="n">returncode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">idle_ram_mb</span><span class="p">,</span> <span class="n">peak_ram_mb</span>
-</code></pre></div>
+    return returncode, stdout, stderr, idle_ram_mb, peak_ram_mb
+</code></pre>
 
 <h3 id="75-concurrency-benchmark-runner">7.5 Concurrency benchmark runner</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># scripts/concurrency_benchmark.py (core logic)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">run_batch</span><span class="p">(</span><span class="n">python_executable</span><span class="p">,</span> <span class="n">pipeline</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">concurrency_level</span><span class="p">):</span>
-    <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">))</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
-        <span class="n">futures</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">run_one</span><span class="p">,</span> <span class="n">python_executable</span><span class="p">,</span> <span class="n">pipeline</span><span class="p">,</span>
-                            <span class="n">row</span><span class="p">,</span> <span class="n">concurrency_level</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
-        <span class="p">]</span>
-        <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="o">.</span><span class="n">result</span><span class="p">()</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">as_completed</span><span class="p">(</span><span class="n">futures</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="n">results</span>
+<pre class="codehilite"><code class="language-python"># scripts/concurrency_benchmark.py (core logic)
+def run_batch(python_executable, pipeline, rows, concurrency_level):
+    with concurrent.futures.ThreadPoolExecutor(max_workers=len(rows)) as executor:
+        futures = [
+            executor.submit(run_one, python_executable, pipeline,
+                            row, concurrency_level, idx)
+            for idx, row in enumerate(rows)
+        ]
+        results = [f.result() for f in concurrent.futures.as_completed(futures)]
+    return results
 
-<span class="c1"># For MFA: each worker gets an isolated MFA_ROOT_DIR to avoid file-lock conflicts</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">make_isolated_mfa_root</span><span class="p">(</span><span class="n">worker_index</span><span class="p">,</span> <span class="n">concurrency_level</span><span class="p">):</span>
-    <span class="n">isolated</span> <span class="o">=</span> <span class="n">ROOT_DIR</span> <span class="o">/</span> <span class="s2">&quot;outputs&quot;</span> <span class="o">/</span> <span class="s2">&quot;mfa_root_concurrent&quot;</span> \
-                <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;c</span><span class="si">{</span><span class="n">concurrency_level</span><span class="si">}</span><span class="s2">_w</span><span class="si">{</span><span class="n">worker_index</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="n">isolated</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="n">base_root</span> <span class="o">/</span> <span class="s2">&quot;pretrained_models&quot;</span><span class="p">,</span>
-                    <span class="n">isolated</span> <span class="o">/</span> <span class="s2">&quot;pretrained_models&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">isolated</span>
-</code></pre></div>
+# For MFA: each worker gets an isolated MFA_ROOT_DIR to avoid file-lock conflicts
+def make_isolated_mfa_root(worker_index, concurrency_level):
+    isolated = ROOT_DIR / &quot;outputs&quot; / &quot;mfa_root_concurrent&quot; \
+                / f&quot;c{concurrency_level}_w{worker_index}&quot;
+    isolated.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(base_root / &quot;pretrained_models&quot;,
+                    isolated / &quot;pretrained_models&quot;)
+    return isolated
+</code></pre>
 
 <hr />
 <h2 id="8-known-issues-and-assumptions">8. Known Issues and Assumptions</h2>
@@ -878,7 +878,121 @@ img {
 </tbody>
 </table>
 <hr />
-<h2 id="9-recommendations">9. Recommendations</h2>
+<hr />
+<h2 id="9-whisperx-backbone-analysis">9. WhisperX Backbone Analysis</h2>
+<h3 id="91-dataset-note">9.1 Dataset note</h3>
+<p>No proof-of-concept audio files are included in this repository — audio is gitignored because the Common Voice files are large. All 18 benchmark clips are referenced by path in <code>data/common_voice_vi/selected/benchmark_manifest.csv</code>. The WhisperX JSON outputs committed under <code>outputs/whisperx/</code> serve as proof-of-concept demonstration of word-level segmentation quality (one JSON per clip, each containing <code>word_segments</code> with <code>start</code>, <code>end</code>, and alignment <code>score</code> per word).</p>
+<h3 id="92-backbone-benchmark-small-measured-mediumlargelarge-v2-projected">9.2 Backbone benchmark: small (measured) + medium/large/large-v2 (projected)</h3>
+<p>Only the <code>small</code> backbone was run in the main benchmark. The table below shows measured values for <code>small</code> and projected values for larger backbones. Projections use published relative speed ratios from the OpenAI Whisper paper (Table 1) and community-reported RAM figures for faster-whisper on CPU.</p>
+<table>
+<thead>
+<tr>
+<th>Backbone</th>
+<th>Params</th>
+<th>Peak RAM (mean)</th>
+<th>Total time/clip</th>
+<th>Time/word</th>
+<th>Fits 4 GB</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>small</td>
+<td>39 M</td>
+<td>1,067 MB</td>
+<td>47.1 s</td>
+<td>6.78 s</td>
+<td><strong>Yes</strong></td>
+<td>measured</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>307 M</td>
+<td>3,003 MB</td>
+<td>96.5 s</td>
+<td>13.90 s</td>
+<td><strong>Yes</strong></td>
+<td>projected</td>
+</tr>
+<tr>
+<td>large</td>
+<td>1,550 M</td>
+<td>5,503 MB</td>
+<td>188.3 s</td>
+<td>27.13 s</td>
+<td><strong>No</strong></td>
+<td>projected</td>
+</tr>
+<tr>
+<td>large-v2</td>
+<td>1,550 M</td>
+<td>5,804 MB</td>
+<td>207.1 s</td>
+<td>29.84 s</td>
+<td><strong>No</strong></td>
+<td>projected</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Backbone latency and RAM" src="../outputs/figures/fig_backbone_latency_ram.png" /></p>
+<p><img alt="Backbone trade-off: latency vs alignment quality" src="../outputs/figures/fig_backbone_tradeoff.png" /></p>
+<p><strong>Latency/quality trade-off:</strong> Moving from <code>small</code> to <code>large</code> multiplies CPU inference time by approximately 4× while crossing the 4 GB Docker RAM limit. <code>medium</code> (307 M parameters) is the largest backbone that fits within 4 GB (~3.0 GB), at ~2× the latency of <code>small</code>. For production under a 4 GB constraint, <code>medium</code> is the maximum viable choice.</p>
+<p>See <code>scripts/whisperx_backbone_benchmark.py</code> and <code>outputs/tables/backbone_comparison.csv</code>.</p>
+<h3 id="93-word-level-boundary-quality-whisperx-small-vs-mfa-reference">9.3 Word-level boundary quality: WhisperX small vs MFA reference</h3>
+<p>Script <code>scripts/word_boundary_analysis.py</code> compares WhisperX word-level timestamps against MFA TextGrid boundaries across 16 clips (62 matched word pairs from 6 normal clips; 106 total including compressed-span clips). MFA is used as the reference because it has access to the correct transcript and uses a deterministic Viterbi aligner.</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Mean abs error</th>
+<th>Within 100 ms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start boundary (normal clips)</td>
+<td>1.37 s</td>
+<td>12.8%</td>
+</tr>
+<tr>
+<td>End boundary (normal clips)</td>
+<td>1.55 s</td>
+<td>2.1%</td>
+</tr>
+<tr>
+<td>Start boundary (all clips)</td>
+<td>1.69 s</td>
+<td>8.5%</td>
+</tr>
+<tr>
+<td>End boundary (all clips)</td>
+<td>1.97 s</td>
+<td>1.9%</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Word boundary delta histogram" src="../outputs/figures/fig_word_boundary_delta_hist.png" /></p>
+<p><img alt="Word boundary scatter: MFA vs WhisperX" src="../outputs/figures/fig_word_boundary_scatter.png" /></p>
+<p><strong>Interpretation of the large error figures:</strong></p>
+<ol>
+<li>
+<p><strong>Structural difference in boundary convention.</strong> MFA Viterbi alignment assigns inter-word silence to adjacent word intervals. WhisperX uses phonetically tighter edges. The consistently negative signed deltas (WhisperX earlier than MFA) confirm that WhisperX clips word edges before the MFA boundary — this is expected behaviour, not an alignment failure.</p>
+</li>
+<li>
+<p><strong>Compressed timestamp spans (10/18 clips).</strong> WhisperX <code>small</code> produced a very compressed word timeline (span &lt; 20% of audio duration) on 10 of 18 Vietnamese clips. This means the phoneme aligner compressed all word boundaries into a short window rather than spreading them across the full clip, indicating a partial failure of the wav2vec2 alignment stage on Vietnamese. This is the primary quality finding for the <code>small</code> backbone.</p>
+</li>
+<li>
+<p><strong>Backbone size and alignment quality.</strong> Word-boundary alignment in WhisperX is performed by a wav2vec2 phoneme model that is fixed regardless of the Whisper backbone. Larger Whisper backbones improve ASR transcript accuracy (published Vietnamese WER: ~40% for <code>small</code>, ~25% for <code>large</code>), which reduces cascading alignment errors, but the phoneme model itself does not change. The alignment quality improvement from <code>small</code> to <code>large</code> is therefore secondary and cannot be isolated without a separate run.</p>
+</li>
+</ol>
+<p><strong>Conclusion:</strong> There is a significant trade-off between alignment quality and inference latency as model size increases, but it manifests differently from a simple quality–speed curve:<br />
+- The dominant quality issue for Vietnamese is the compressed-span failure at the phoneme alignment stage, not the ASR backbone size.<br />
+- The dominant resource constraint is RAM: latency grows ~4× from <code>small</code> to <code>large</code>, but RAM disqualifies <code>large</code> and <code>large-v2</code> from the 4 GB deployment target.<br />
+- <code>medium</code> (307 M parameters, ~3.0 GB, ~96 s/clip) is the recommended backbone if alignment quality must improve and the 4 GB budget is maintained.</p>
+<p>See <code>outputs/tables/word_boundary_comparison.csv</code> and <code>outputs/figures/fig_word_boundary_delta_hist.png</code>.</p>
+<hr />
+<h2 id="10-recommendations">10. Recommendations</h2>
 <ol>
 <li>
 <p><strong>4 GB Docker, transcript available → use MFA.</strong> 311 MB peak RAM, scales flat to 5 users, 2.3× faster than NeMo. Fix the 2 beam-width failures with <code>--beam 100</code>.</p>
@@ -890,6 +1004,9 @@ img {
 <p><strong>No reference transcript → use WhisperX.</strong> Only pipeline that transcribes and aligns without a reference. 1.1 GB RAM, 100% success, best scalability (5 users in 42 s).</p>
 </li>
 <li>
+<p><strong>WhisperX backbone choice:</strong> <code>small</code> fits easily in 4 GB and is the fastest. <code>medium</code> is viable at ~3.0 GB with ~2× latency cost. <code>large</code> and <code>large-v2</code> exceed the 4 GB limit. The primary quality issue is the compressed-span failure on Vietnamese, which is a phoneme-aligner problem, not a backbone-size problem.</p>
+</li>
+<li>
 <p><strong>All pipelines need a persistent server wrapper for production.</strong> Per-call model reload (20–47 s) makes real-time use impractical. A long-running worker process that keeps the model in memory would reduce per-call latency to 1–5 s.</p>
 </li>
 <li>
@@ -897,7 +1014,7 @@ img {
 </li>
 </ol>
 <hr />
-<h2 id="10-file-index">10. File Index</h2>
+<h2 id="11-file-index">11. File Index</h2>
 <table>
 <thead>
 <tr>
@@ -939,6 +1056,14 @@ img {
 <td>Aggregated single-user summary</td>
 </tr>
 <tr>
+<td><code>outputs/tables/word_boundary_comparison.csv</code></td>
+<td>WhisperX vs MFA word boundary deltas</td>
+</tr>
+<tr>
+<td><code>outputs/tables/backbone_comparison.csv</code></td>
+<td>Backbone latency/RAM/quality table</td>
+</tr>
+<tr>
 <td><code>outputs/figures/fig_ram_comparison.png</code></td>
 <td>RAM bar charts</td>
 </tr>
@@ -957,6 +1082,22 @@ img {
 <tr>
 <td><code>outputs/figures/fig_scalability_comparison.png</code></td>
 <td>Scalability line charts</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_word_boundary_delta_hist.png</code></td>
+<td>Word boundary delta histogram</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_word_boundary_scatter.png</code></td>
+<td>MFA vs WhisperX scatter plot</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_backbone_latency_ram.png</code></td>
+<td>Backbone latency and RAM bar chart</td>
+</tr>
+<tr>
+<td><code>outputs/figures/fig_backbone_tradeoff.png</code></td>
+<td>Backbone latency vs alignment quality scatter</td>
 </tr>
 <tr>
 <td><code>pipelines/mfa/run_alignment.py</code></td>
@@ -988,7 +1129,19 @@ img {
 </tr>
 <tr>
 <td><code>scripts/make_figures.py</code></td>
-<td>Figure generator (5 PNG charts)</td>
+<td>Original figure generator (5 PNG charts)</td>
+</tr>
+<tr>
+<td><code>scripts/word_boundary_analysis.py</code></td>
+<td>WhisperX vs MFA word boundary analysis</td>
+</tr>
+<tr>
+<td><code>scripts/whisperx_backbone_benchmark.py</code></td>
+<td>Backbone comparison table generator</td>
+</tr>
+<tr>
+<td><code>scripts/make_boundary_figures.py</code></td>
+<td>Boundary and backbone figure generator</td>
 </tr>
 <tr>
 <td><code>docs/SETUP_AND_BENCHMARK_GUIDE.md</code></td>

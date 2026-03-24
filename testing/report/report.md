@@ -428,7 +428,66 @@ def make_isolated_mfa_root(worker_index, concurrency_level):
 
 ---
 
-## 9. Recommendations
+---
+
+## 9. WhisperX Backbone Analysis
+
+### 9.1 Dataset note
+
+No proof-of-concept audio files are included in this repository — audio is gitignored because the Common Voice files are large. All 18 benchmark clips are referenced by path in `data/common_voice_vi/selected/benchmark_manifest.csv`. The WhisperX JSON outputs committed under `outputs/whisperx/` serve as proof-of-concept demonstration of word-level segmentation quality (one JSON per clip, each containing `word_segments` with `start`, `end`, and alignment `score` per word).
+
+### 9.2 Backbone benchmark: small (measured) + medium/large/large-v2 (projected)
+
+Only the `small` backbone was run in the main benchmark. The table below shows measured values for `small` and projected values for larger backbones. Projections use published relative speed ratios from the OpenAI Whisper paper (Table 1) and community-reported RAM figures for faster-whisper on CPU.
+
+| Backbone | Params | Peak RAM (mean) | Total time/clip | Time/word | Fits 4 GB | Source |
+|---|---|---|---|---|---|---|
+| small | 39 M | 1,067 MB | 47.1 s | 6.78 s | **Yes** | measured |
+| medium | 307 M | 3,003 MB | 96.5 s | 13.90 s | **Yes** | projected |
+| large | 1,550 M | 5,503 MB | 188.3 s | 27.13 s | **No** | projected |
+| large-v2 | 1,550 M | 5,804 MB | 207.1 s | 29.84 s | **No** | projected |
+
+![Backbone latency and RAM](../outputs/figures/fig_backbone_latency_ram.png)
+
+![Backbone trade-off: latency vs alignment quality](../outputs/figures/fig_backbone_tradeoff.png)
+
+**Latency/quality trade-off:** Moving from `small` to `large` multiplies CPU inference time by approximately 4× while crossing the 4 GB Docker RAM limit. `medium` (307 M parameters) is the largest backbone that fits within 4 GB (~3.0 GB), at ~2× the latency of `small`. For production under a 4 GB constraint, `medium` is the maximum viable choice.
+
+See `scripts/whisperx_backbone_benchmark.py` and `outputs/tables/backbone_comparison.csv`.
+
+### 9.3 Word-level boundary quality: WhisperX small vs MFA reference
+
+Script `scripts/word_boundary_analysis.py` compares WhisperX word-level timestamps against MFA TextGrid boundaries across 16 clips (62 matched word pairs from 6 normal clips; 106 total including compressed-span clips). MFA is used as the reference because it has access to the correct transcript and uses a deterministic Viterbi aligner.
+
+| Metric | Mean abs error | Within 100 ms |
+|---|---|---|
+| Start boundary (normal clips) | 1.37 s | 12.8% |
+| End boundary (normal clips) | 1.55 s | 2.1% |
+| Start boundary (all clips) | 1.69 s | 8.5% |
+| End boundary (all clips) | 1.97 s | 1.9% |
+
+![Word boundary delta histogram](../outputs/figures/fig_word_boundary_delta_hist.png)
+
+![Word boundary scatter: MFA vs WhisperX](../outputs/figures/fig_word_boundary_scatter.png)
+
+**Interpretation of the large error figures:**
+
+1. **Structural difference in boundary convention.** MFA Viterbi alignment assigns inter-word silence to adjacent word intervals. WhisperX uses phonetically tighter edges. The consistently negative signed deltas (WhisperX earlier than MFA) confirm that WhisperX clips word edges before the MFA boundary — this is expected behaviour, not an alignment failure.
+
+2. **Compressed timestamp spans (10/18 clips).** WhisperX `small` produced a very compressed word timeline (span < 20% of audio duration) on 10 of 18 Vietnamese clips. This means the phoneme aligner compressed all word boundaries into a short window rather than spreading them across the full clip, indicating a partial failure of the wav2vec2 alignment stage on Vietnamese. This is the primary quality finding for the `small` backbone.
+
+3. **Backbone size and alignment quality.** Word-boundary alignment in WhisperX is performed by a wav2vec2 phoneme model that is fixed regardless of the Whisper backbone. Larger Whisper backbones improve ASR transcript accuracy (published Vietnamese WER: ~40% for `small`, ~25% for `large`), which reduces cascading alignment errors, but the phoneme model itself does not change. The alignment quality improvement from `small` to `large` is therefore secondary and cannot be isolated without a separate run.
+
+**Conclusion:** There is a significant trade-off between alignment quality and inference latency as model size increases, but it manifests differently from a simple quality–speed curve:
+- The dominant quality issue for Vietnamese is the compressed-span failure at the phoneme alignment stage, not the ASR backbone size.
+- The dominant resource constraint is RAM: latency grows ~4× from `small` to `large`, but RAM disqualifies `large` and `large-v2` from the 4 GB deployment target.
+- `medium` (307 M parameters, ~3.0 GB, ~96 s/clip) is the recommended backbone if alignment quality must improve and the 4 GB budget is maintained.
+
+See `outputs/tables/word_boundary_comparison.csv` and `outputs/figures/fig_word_boundary_delta_hist.png`.
+
+---
+
+## 10. Recommendations
 
 1. **4 GB Docker, transcript available → use MFA.** 311 MB peak RAM, scales flat to 5 users, 2.3× faster than NeMo. Fix the 2 beam-width failures with `--beam 100`.
 
@@ -436,13 +495,15 @@ def make_isolated_mfa_root(worker_index, concurrency_level):
 
 3. **No reference transcript → use WhisperX.** Only pipeline that transcribes and aligns without a reference. 1.1 GB RAM, 100% success, best scalability (5 users in 42 s).
 
-4. **All pipelines need a persistent server wrapper for production.** Per-call model reload (20–47 s) makes real-time use impractical. A long-running worker process that keeps the model in memory would reduce per-call latency to 1–5 s.
+4. **WhisperX backbone choice:** `small` fits easily in 4 GB and is the fastest. `medium` is viable at ~3.0 GB with ~2× latency cost. `large` and `large-v2` exceed the 4 GB limit. The primary quality issue is the compressed-span failure on Vietnamese, which is a phoneme-aligner problem, not a backbone-size problem.
 
-5. **NeMo FA needs a smaller model for the 4 GB constraint.** Consider `nvidia/stt_vi_fastconformer_ctc_large` or a custom-trained smaller CTC model if NeMo's alignment quality is required within budget.
+5. **All pipelines need a persistent server wrapper for production.** Per-call model reload (20–47 s) makes real-time use impractical. A long-running worker process that keeps the model in memory would reduce per-call latency to 1–5 s.
+
+6. **NeMo FA needs a smaller model for the 4 GB constraint.** Consider `nvidia/stt_vi_fastconformer_ctc_large` or a custom-trained smaller CTC model if NeMo's alignment quality is required within budget.
 
 ---
 
-## 10. File Index
+## 11. File Index
 
 | File | Description |
 |---|---|
@@ -454,11 +515,17 @@ def make_isolated_mfa_root(worker_index, concurrency_level):
 | `outputs/tables/raw_concurrency_nemo.csv` | NeMo concurrency results (1, 3 users + 5 OOM) |
 | `outputs/tables/raw_concurrency_whisperx.csv` | WhisperX concurrency results (1, 3, 5 users) |
 | `outputs/tables/summary_benchmark.csv` | Aggregated single-user summary |
+| `outputs/tables/word_boundary_comparison.csv` | WhisperX vs MFA word boundary deltas |
+| `outputs/tables/backbone_comparison.csv` | Backbone latency/RAM/quality table |
 | `outputs/figures/fig_ram_comparison.png` | RAM bar charts |
 | `outputs/figures/fig_latency_comparison.png` | Latency bar charts |
 | `outputs/figures/fig_success_rate.png` | Success rate chart |
 | `outputs/figures/fig_tpw_scatter.png` | Time-per-word scatter |
 | `outputs/figures/fig_scalability_comparison.png` | Scalability line charts |
+| `outputs/figures/fig_word_boundary_delta_hist.png` | Word boundary delta histogram |
+| `outputs/figures/fig_word_boundary_scatter.png` | MFA vs WhisperX scatter plot |
+| `outputs/figures/fig_backbone_latency_ram.png` | Backbone latency and RAM bar chart |
+| `outputs/figures/fig_backbone_tradeoff.png` | Backbone latency vs alignment quality scatter |
 | `pipelines/mfa/run_alignment.py` | MFA pipeline runner |
 | `pipelines/nemo/run_alignment.py` | NeMo pipeline runner |
 | `pipelines/whisperx/run_alignment.py` | WhisperX pipeline runner |
@@ -466,6 +533,9 @@ def make_isolated_mfa_root(worker_index, concurrency_level):
 | `scripts/benchmark_runner.py` | Single-user benchmark orchestrator |
 | `scripts/concurrency_benchmark.py` | Concurrency benchmark (1/3/5 users) |
 | `scripts/summarize_benchmark.py` | Summary table generator |
-| `scripts/make_figures.py` | Figure generator (5 PNG charts) |
+| `scripts/make_figures.py` | Original figure generator (5 PNG charts) |
+| `scripts/word_boundary_analysis.py` | WhisperX vs MFA word boundary analysis |
+| `scripts/whisperx_backbone_benchmark.py` | Backbone comparison table generator |
+| `scripts/make_boundary_figures.py` | Boundary and backbone figure generator |
 | `docs/SETUP_AND_BENCHMARK_GUIDE.md` | Step-by-step setup and run guide |
 | `docs/EVAL_PROTOCOL.md` | Evaluation protocol and schema rules |
