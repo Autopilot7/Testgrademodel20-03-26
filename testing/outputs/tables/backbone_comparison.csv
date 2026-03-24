@@ -1,0 +1,5 @@
+backbone,param_count_M,peak_ram_mb_mean,peak_ram_mb_max,total_time_mean_sec,total_time_median_sec,time_per_word_mean_sec,approx_word_boundary_mae_start_sec,approx_word_boundary_mae_end_sec,fits_4gb_docker,source,notes
+small,39,1067.3,1146.5,47.07,47.76,6.782,1.688,1.974,True,measured,18/18 success; compressed timestamps on ~10/18 clips
+medium,307,3003.3,3226.3,96.49,97.91,13.903,1.519,1.776,True,projected,"projected from small×2.05 speed, ×2.814 RAM"
+large,1550,5502.9,5911.5,188.28,191.04,27.128,1.384,1.618,False,projected,"projected from small×4.00 speed, ×5.156 RAM | EXCEEDS 4 GB Docker limit"
+large-v2,1550,5803.9,6234.8,207.11,210.14,29.84,1.35,1.579,False,projected,"projected from small×4.40 speed, ×5.438 RAM | EXCEEDS 4 GB Docker limit"
