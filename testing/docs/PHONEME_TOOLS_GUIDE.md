@@ -1,20 +1,20 @@
-# Hướng dẫn sử dụng: Phoneme Splitting & Comparison Tools
+# Phoneme Splitting & Comparison Tools — Usage Guide
 
-Ba script mới nằm trong `scripts/` phục vụ cho việc tách audio theo âm vị, kiểm tra chất lượng, và so sánh phát âm.
+Three scripts in `scripts/` for splitting audio by phoneme, reviewing clip quality, and comparing pronunciation.
 
-**Yêu cầu trước khi chạy:**
-- MFA đã chạy xong — các file `.TextGrid` phải tồn tại trong `outputs/mfa/{audio_id}/aligned/`
-- Môi trường conda `mfa-aligner` đã được cài đặt (xem `docs/SETUP_AND_BENCHMARK_GUIDE.md`)
+**Prerequisites:**
+- MFA has been run — `.TextGrid` files must exist under `outputs/mfa/{audio_id}/aligned/`
+- The `mfa-aligner` conda environment is installed (see `docs/SETUP_AND_BENCHMARK_GUIDE.md`)
 
 ---
 
-## Tính năng 1 — Tách audio theo timestamp MFA
+## Feature 1 — Split Audio by MFA Timestamps
 
 **Script:** `scripts/split_phonemes.py`
 
-Đọc các file TextGrid từ MFA và cắt file WAV gốc thành từng clip âm vị riêng biệt.
+Reads TextGrid files from MFA and slices the source WAV into individual phoneme clips.
 
-### Chạy nhanh
+### Quick start
 
 ```bash
 conda activate mfa-aligner
@@ -22,18 +22,18 @@ cd "C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing"
 python scripts/split_phonemes.py
 ```
 
-Không cần thêm tham số — script tự dùng manifest mặc định và thư mục output mặc định.
+No extra arguments needed — the script uses the default manifest and output directory.
 
-### Tham số tuỳ chọn
+### Optional arguments
 
-| Tham số | Mặc định | Mô tả |
-|---------|----------|-------|
-| `--manifest` | `data/common_voice_vi/selected/benchmark_manifest.csv` | Manifest CSV đầu vào |
-| `--mfa-output-dir` | `outputs/mfa` | Thư mục chứa TextGrid của MFA |
-| `--output-dir` | `outputs/phoneme_splits` | Thư mục lưu clip âm vị |
-| `--min-duration-ms` | `20` | Bỏ qua clip ngắn hơn N ms |
+| Argument | Default | Description |
+|----------|---------|-------------|
+| `--manifest` | `data/common_voice_vi/selected/benchmark_manifest.csv` | Input CSV manifest |
+| `--mfa-output-dir` | `outputs/mfa` | Root directory containing MFA TextGrid files |
+| `--output-dir` | `outputs/phoneme_splits` | Output directory for phoneme clips |
+| `--min-duration-ms` | `20` | Skip clips shorter than N ms |
 
-Ví dụ chạy với tham số tuỳ chỉnh:
+Example with custom arguments:
 ```bash
 python scripts/split_phonemes.py \
   --manifest data/common_voice_vi/selected/benchmark_manifest.csv \
@@ -45,11 +45,11 @@ python scripts/split_phonemes.py \
 
 ```
 outputs/phoneme_splits/
-├── all_splits_manifest.csv              ← manifest tổng hợp toàn bộ 18 file
+├── all_splits_manifest.csv              ← merged manifest for all 18 files
 ├── common_voice_vi_25132172/
-│   ├── splits_manifest.csv              ← manifest riêng cho audio này
-│   ├── 0001_t_U0331_80_140.wav          ← âm "t̪" từ 80ms đến 140ms
-│   ├── 0002_a_U02D0_U02E8_U02E9_U02C0_140_170.wav   ← âm "aː˨˩ˀ"
+│   ├── splits_manifest.csv              ← per-audio manifest
+│   ├── 0001_t_U0331_80_140.wav          ← phoneme "t̪" from 80ms to 140ms
+│   ├── 0002_a_U02D0_U02E8_U02E9_U02C0_140_170.wav   ← phoneme "aː˨˩ˀ"
 │   ├── 0003_j_170_200.wav
 │   ├── 0004_s_710_790.wav
 │   ├── 0005_a_U02D0_U02E7_790_1030.wav
@@ -58,73 +58,73 @@ outputs/phoneme_splits/
     └── ...
 ```
 
-`splits_manifest.csv` có các cột: `audio_id`, `phoneme`, `index`, `xmin`, `xmax`, `duration_ms`, `wav_path`, `skipped`, `skip_reason`
+`splits_manifest.csv` columns: `audio_id`, `phoneme`, `index`, `xmin`, `xmax`, `duration_ms`, `wav_path`, `skipped`, `skip_reason`
 
-**Lưu ý:**
-- Khoảng lặng (silence) trong TextGrid được bỏ qua tự động
-- Tên file dùng ký hiệu Unicode hex cho ký tự IPA (ví dụ `_U02D0` = `ː`) để tránh lỗi filesystem
+**Notes:**
+- Silence intervals (empty `text` in TextGrid) are skipped automatically
+- Filenames use Unicode hex for IPA characters (e.g. `_U02D0` = `ː`) to avoid filesystem errors
 
 ---
 
-## Tính năng 2 — Kiểm tra chất lượng clip âm vị
+## Feature 2 — Review Phoneme Clip Quality
 
 **Script:** `scripts/verify_splits.py`
 
-Tạo một file HTML tự chứa (standalone) — mở bằng trình duyệt, nghe từng clip và đánh dấu chất lượng.
+Generates a self-contained HTML file — open in any browser to listen to each clip and mark its quality.
 
-**Chạy Tính năng 1 trước khi dùng Tính năng 2.**
+**Run Feature 1 before Feature 2.**
 
-### Chạy nhanh
+### Quick start
 
 ```bash
 python scripts/verify_splits.py
 ```
 
-Mở file HTML được tạo ra trong trình duyệt (Chrome/Edge/Firefox):
+Open the generated HTML file in a browser (Chrome / Edge / Firefox):
 
 ```
 outputs/phoneme_splits/review_20260329_123456.html
 ```
 
-### Tham số tuỳ chọn
+### Optional arguments
 
-| Tham số | Mặc định | Mô tả |
-|---------|----------|-------|
-| `--splits-dir` | `outputs/phoneme_splits` | Thư mục chứa kết quả split |
-| `--manifest` | `outputs/phoneme_splits/all_splits_manifest.csv` | Manifest tổng hợp |
-| `--benchmark-manifest` | `data/.../benchmark_manifest.csv` | Để lấy transcript gốc hiển thị |
-| `--output` | `splits_dir/review_<timestamp>.html` | Tên file HTML output |
+| Argument | Default | Description |
+|----------|---------|-------------|
+| `--splits-dir` | `outputs/phoneme_splits` | Directory produced by `split_phonemes.py` |
+| `--manifest` | `outputs/phoneme_splits/all_splits_manifest.csv` | Merged splits manifest |
+| `--benchmark-manifest` | `data/.../benchmark_manifest.csv` | Source for reference transcripts |
+| `--output` | `splits_dir/review_<timestamp>.html` | Output HTML path |
 
-### Giao diện HTML
+### HTML interface
 
-Mỗi audio được hiển thị thành một bảng. Mỗi hàng là một âm vị:
+Each audio file is shown as a table. Each row is one phoneme:
 
-| Cột | Nội dung |
-|-----|---------|
-| # | Số thứ tự clip |
-| Phoneme | Ký hiệu IPA (hiển thị font lớn) |
-| Start–End | Thời gian trong file gốc (ms) |
-| Duration | Độ dài clip (ms) |
-| Audio | Nút play trực tiếp |
+| Column | Content |
+|--------|---------|
+| # | Clip index |
+| Phoneme | IPA symbol (large font) |
+| Start–End | Timestamp within the source file (ms) |
+| Duration | Clip length (ms) |
+| Audio | Inline play button |
 | Verdict | Dropdown: `OK / Cropped / Noisy / Silent / Wrong` |
-| Notes | Ô ghi chú tự do |
+| Notes | Free-text note field |
 
-**Kiểm tra các vấn đề sau:**
-- **Cropped** — clip bị cắt mất đầu hoặc cuối âm
-- **Noisy** — có nhiễu ảnh hưởng đến so sánh pitch graph
-- **Wrong** — sai âm vị so với nhãn IPA hiển thị
+**Check for the following issues:**
+- **Cropped** — clip is cut too early or too late, missing part of the phoneme
+- **Noisy** — background noise that may affect pitch graph comparison
+- **Wrong** — phoneme label does not match what is heard
 
-Sau khi nghe xong, bấm **Export Verdicts as JSON** để lưu kết quả đánh giá.
+After reviewing, click **Export Verdicts as JSON** to save the results.
 
 ---
 
-## Tính năng 3 — So sánh phát âm
+## Feature 3 — Pronunciation Comparison
 
 **Script:** `scripts/compare_phonemes.py`
 
-So sánh hai chuỗi âm vị IPA và tính điểm chính xác per phoneme.
+Compares two IPA phoneme sequences and computes per-phoneme accuracy scores.
 
-### Chạy nhanh
+### Quick start
 
 ```bash
 python scripts/compare_phonemes.py \
@@ -132,18 +132,18 @@ python scripts/compare_phonemes.py \
   --hypothesis "k aː˨˩ˀ j s aː˧ w"
 ```
 
-### Tham số
+### Arguments
 
-| Tham số | Mô tả |
-|---------|-------|
-| `--reference` | Chuỗi âm vị chuẩn (từ MFA của bản ghi gốc), cách nhau bằng dấu cách |
-| `--hypothesis` | Chuỗi âm vị của người dùng (từ MFA của bản ghi âm người dùng) |
-| `--ignore-tones` | Bỏ qua dấu thanh điệu khi so sánh (so sánh lỏng hơn) |
-| `--json-only` | Chỉ in JSON ra stdout, không in bảng căn chỉnh |
+| Argument | Description |
+|----------|-------------|
+| `--reference` | Reference phoneme sequence (from MFA on the native recording), space-separated |
+| `--hypothesis` | User phoneme sequence (from MFA on the user's recording), space-separated |
+| `--ignore-tones` | Strip tone diacritics before comparison (lenient mode) |
+| `--json-only` | Print JSON to stdout only, suppress the alignment table on stderr |
 
-### Lấy chuỗi âm vị từ TextGrid
+### Getting the phoneme sequence from a TextGrid
 
-Mở file TextGrid trong `outputs/mfa/{audio_id}/aligned/{audio_id}.TextGrid`, đọc tier `"phones"`:
+Open `outputs/mfa/{audio_id}/aligned/{audio_id}.TextGrid` and read the `"phones"` tier:
 
 ```
 intervals [2]:  xmin=0.08  xmax=0.14  text="t̪"
@@ -151,20 +151,22 @@ intervals [3]:  xmin=0.14  xmax=0.17  text="aː˨˩ˀ"
 intervals [4]:  xmin=0.17  xmax=0.20  text="j"
 ```
 
-→ Chuỗi input: `"t̪ aː˨˩ˀ j"` (bỏ các interval có `text = ""`)
+→ Input string: `"t̪ aː˨˩ˀ j"` (skip intervals where `text = ""`)
 
 ### Output
 
-**stderr** — Bảng căn chỉnh dễ đọc:
+**stderr** — Alignment table with component scores:
 ```
 REF: t̪          | aː˨˩ˀ     | j         | s         | aː˧       | w
 HYP: k           | aː˨˩ˀ     | j         | s         | aː˧       | w
      SUBST        | OK         | OK         | OK         | OK         | OK
 
-Accuracy: 83.33%  (correct=5 subst=1 ins=0 del=0)
+Overall accuracy : 83.33%  (correct=5 subst=1 ins=0 del=0)
+Component scores : Consonant 75.0% (3/4)  |  Vowel 100.0% (2/2)  |  Tone 100.0% (2/2)
+Weighted final   : 92.5%  (consonant*0.3 + vowel*0.3 + tone*0.4)
 ```
 
-**stdout** — JSON (dùng để tích hợp với pipeline khác):
+**stdout** — JSON (for integration with other pipeline tools):
 ```json
 {
   "reference": ["t̪", "aː˨˩ˀ", "j", "s", "aː˧", "w"],
@@ -172,10 +174,7 @@ Accuracy: 83.33%  (correct=5 subst=1 ins=0 del=0)
   "alignment": [
     {"ref": "t̪",     "hyp": "k",      "verdict": "substitution", "score": 0.0},
     {"ref": "aː˨˩ˀ", "hyp": "aː˨˩ˀ", "verdict": "correct",      "score": 1.0},
-    {"ref": "j",      "hyp": "j",      "verdict": "correct",      "score": 1.0},
-    {"ref": "s",      "hyp": "s",      "verdict": "correct",      "score": 1.0},
-    {"ref": "aː˧",   "hyp": "aː˧",   "verdict": "correct",      "score": 1.0},
-    {"ref": "w",      "hyp": "w",      "verdict": "correct",      "score": 1.0}
+    ...
   ],
   "correct": 5,
   "substitutions": 1,
@@ -183,45 +182,83 @@ Accuracy: 83.33%  (correct=5 subst=1 ins=0 del=0)
   "deletions": 0,
   "total_ref": 6,
   "total_hyp": 6,
-  "accuracy_pct": 83.33
+  "accuracy_pct": 83.33,
+  "component_scores": {
+    "consonant_pct": 75.0,
+    "consonant_correct": 3,
+    "consonant_total": 4,
+    "vowel_pct": 100.0,
+    "vowel_correct": 2,
+    "vowel_total": 2,
+    "tone_pct": 100.0,
+    "tone_correct": 2,
+    "tone_total": 2,
+    "final_pct": 92.5,
+    "weights": {"consonant": 0.3, "vowel": 0.3, "tone": 0.4}
+  }
 }
 ```
 
-**Các loại lỗi:**
+### Vietnamese Component Score
 
-| Verdict | Ý nghĩa | Ví dụ |
-|---------|---------|-------|
-| `correct` | Đúng âm | `t̪` → `t̪` |
-| `substitution` | Sai âm | `t̪` → `k` |
-| `deletion` | Bỏ sót âm | `t̪` → _(không có)_ |
-| `insertion` | Thêm âm thừa | _(không có)_ → `t̪` |
+The script breaks the score into 3 components of a Vietnamese syllable:
 
-**Ví dụ với `--ignore-tones`:**
+| Component | How to identify from MFA symbol | Example |
+|-----------|--------------------------------|---------|
+| **Consonant** | No tone diacritics, no `ː` | `t̪`, `s`, `k`, `w`, `j` |
+| **Vowel** | Contains `ː` or tone diacritics — compared without tone | `aː˨˩ˀ` vs `aː˧` → vowel correct |
+| **Tone** | The tone diacritics portion of the vowel symbol | `˨˩ˀ` vs `˧` → tone wrong |
+
+**Formula:**
+```
+Final = Consonant × 0.3 + Vowel × 0.3 + Tone × 0.4
+```
+Tone carries the highest weight (0.4) because it is the primary meaning-distinguishing feature in Vietnamese.
+
+**Comparison of the two metrics:**
+
+| Scenario | `accuracy_pct` | `final_pct` |
+|----------|---------------|------------|
+| Wrong initial consonant, correct tone | 83.33% | 92.5% (penalised less) |
+| Correct consonant, wrong tone | 66.67% | 60.0% (penalised more) |
+
+`final_pct` is more appropriate for grading Vietnamese pronunciation because it reflects the actual severity of each error type.
+
+**Error types:**
+
+| Verdict | Meaning | Example |
+|---------|---------|---------|
+| `correct` | Phoneme matches | `t̪` → `t̪` |
+| `substitution` | Wrong phoneme produced | `t̪` → `k` |
+| `deletion` | Phoneme missing from hypothesis | `t̪` → _(absent)_ |
+| `insertion` | Extra phoneme in hypothesis | _(absent)_ → `t̪` |
+
+**Example with `--ignore-tones`:**
 ```bash
 python scripts/compare_phonemes.py \
   --reference "aː˨˩ˀ" \
   --hypothesis "aː˧"
-# Không ignore: substitution (khác thanh điệu)
-# Với --ignore-tones: correct (cùng nguyên âm aː)
+# Without flag: substitution  (tones differ)
+# With --ignore-tones: correct (same vowel base aː)
 ```
 
 ---
 
-## Thứ tự chạy đầy đủ
+## Full run order
 
 ```bash
-# 1. Tách audio
+# 1. Split audio (requires mfa-aligner env)
 conda activate mfa-aligner
 python scripts/split_phonemes.py
 
-# 2. Kiểm tra chất lượng (dùng Python bất kỳ)
+# 2. Review clip quality (any Python)
 python scripts/verify_splits.py
-# → mở file HTML trong browser
+# → open the generated HTML file in a browser
 
-# 3. So sánh phát âm (dùng Python bất kỳ)
+# 3. Compare pronunciation (any Python)
 python scripts/compare_phonemes.py \
   --reference "..." \
   --hypothesis "..."
 ```
 
-Tính năng 3 độc lập, không cần chạy 1 và 2 trước.
+Feature 3 is standalone — Features 1 and 2 do not need to be run first.
