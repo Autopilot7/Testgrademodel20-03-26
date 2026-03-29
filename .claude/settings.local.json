@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\(^[^/]*testing[^/]*\\\\.py$|^[^/]*testing[^/]*\\\\.md$|^[^/]*testing[^/]*\\\\.txt$\\)\")",
+      "Bash(git -C /c/Users/Surface1/Documents/Testgrademodel20-03-26 log --oneline -10)",
+      "Bash(find c:UsersSurface1DocumentsTestgrademodel20-03-26testing -name *dict* -o -name *phoneme*)",
+      "Bash(pip list:*)",
+      "Bash(python -c \"import pydub; print\\(''''pydub ok''''\\)\")",
+      "Bash(python -c \"import scipy; print\\(''''scipy ok''''\\)\")",
+      "Bash(python -c \"import numpy; print\\(''''numpy ok''''\\)\")",
+      "Bash(python -c \"import wave; print\\(''wave stdlib ok''\\)\")",
+      "Bash(python -c \"import struct; print\\(''struct ok''\\)\")",
+      "Bash(/c/Users/Surface1/Anaconda3/envs/mfa-aligner/python.exe -m pip list)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/Surface1/Documents/Testgrademodel20-03-26/**)",
+      "Bash(done)"
+    ]
+  }
+}

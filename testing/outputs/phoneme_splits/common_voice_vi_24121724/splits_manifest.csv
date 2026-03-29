@@ -1,0 +1,14 @@
+audio_id,phoneme,index,xmin,xmax,duration_ms,wav_path,skipped,skip_reason
+common_voice_vi_24121724,,,0.0000,0.7500,750.0,,True,silence
+common_voice_vi_24121724,ɓ,1,0.7500,0.8900,140.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0001__U0253_750_890.wav,False,
+common_voice_vi_24121724,o˧˥,2,0.8900,1.0900,200.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0002_o_U02E7_U02E5_890_1090.wav,False,
+common_voice_vi_24121724,ʔ,3,1.0900,1.1900,100.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0003__U0294_1090_1190.wav,False,
+common_voice_vi_24121724,ɛ˧,4,1.1900,1.3200,130.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0004__U025B_U02E7_1190_1320.wav,False,
+common_voice_vi_24121724,m,5,1.3200,1.4200,100.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0005_m_1320_1420.wav,False,
+common_voice_vi_24121724,l,6,1.4200,1.5500,130.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0006_l_1420_1550.wav,False,
+common_voice_vi_24121724,ie˧˨˩,7,1.5500,1.7500,200.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0007_ie_U02E7_U02E8_U02E9_1550_1750.wav,False,
+common_voice_vi_24121724,n̪,8,1.7500,1.8300,80.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0008_n_U032A_1750_1830.wav,False,
+common_voice_vi_24121724,n̪,9,1.8300,1.9700,140.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0009_n_U032A_1830_1970.wav,False,
+common_voice_vi_24121724,ɔ˧˥,10,1.9700,2.1900,220.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0010__U0254_U02E7_U02E5_1970_2190.wav,False,
+common_voice_vi_24121724,j,11,2.1900,2.8500,660.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_24121724\0011_j_2190_2850.wav,False,
+common_voice_vi_24121724,,,2.8500,3.1680,318.0,,True,silence

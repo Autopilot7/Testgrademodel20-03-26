@@ -1,0 +1,10 @@
+audio_id,phoneme,index,xmin,xmax,duration_ms,wav_path,skipped,skip_reason
+common_voice_vi_25132172,,,0.0000,0.0800,80.0,,True,silence
+common_voice_vi_25132172,t̪,1,0.0800,0.1400,60.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_25132172\0001_t_U032A_80_140.wav,False,
+common_voice_vi_25132172,aː˨˩ˀ,2,0.1400,0.1700,30.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_25132172\0002_a_U02D0_U02E8_U02E9_U02C0_140_170.wav,False,
+common_voice_vi_25132172,j,3,0.1700,0.2000,30.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_25132172\0003_j_170_200.wav,False,
+common_voice_vi_25132172,,,0.2000,0.7100,510.0,,True,silence
+common_voice_vi_25132172,s,4,0.7100,0.7900,80.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_25132172\0004_s_710_790.wav,False,
+common_voice_vi_25132172,aː˧,5,0.7900,1.0300,240.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_25132172\0005_a_U02D0_U02E7_790_1030.wav,False,
+common_voice_vi_25132172,w,6,1.0300,1.2400,210.0,C:\Users\Surface1\Documents\Testgrademodel20-03-26\testing\outputs\phoneme_splits\common_voice_vi_25132172\0006_w_1030_1240.wav,False,
+common_voice_vi_25132172,,,1.2400,1.3680,128.0,,True,silence

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/compare_phonemes.py --reference \"t̪ aː˨˩ˀ j\" --hypothesis \"t̪ aː˧ j\")"
+    ]
+  }
+}
